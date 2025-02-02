@@ -10,7 +10,7 @@ const Navbar = () => {
     return (
       <li>
         <Link
-          href="/home"
+          href="/"
           className="hover:text-brownHover transition duration-300 text-xl"
         >
           {name}

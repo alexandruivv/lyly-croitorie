@@ -11,6 +11,7 @@ export default {
       colors: {
         peach: '#FADCC3',
         brownHover: '#844008',
+        secondary: '#97D0FF'
       },
     },
   },
