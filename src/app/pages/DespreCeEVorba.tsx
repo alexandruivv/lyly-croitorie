@@ -31,14 +31,13 @@ const DespreCeEVorba = () => {
             <Image src={despreCeEVorbaBg} alt="bg-despre-ce-e-vorba" className="h-full object-cover opacity-20 absolute" />
             <div className="flex flex-col gap-40 p-10 text-black">
                 <h1 className="font-bold text-5xl text-center">Cum procedam?</h1>
-                <div className="grid grid-cols-5 gap-20">
+                <div className="grid grid-cols-3 gap-20">
                     {descrieri.map((descriere, index) => (
                         <>
                             <CumProcedamDescriere key={index}
                                                   numar={descriere.numar}
                                                   icon={descriere.icon}
                                                   descriere={descriere.descriere} />
-                            <span>3</span>
                         </>
 
                     ))}
