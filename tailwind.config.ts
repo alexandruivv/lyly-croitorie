@@ -9,8 +9,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        peach: '#FADCC3',
+        brownHover: '#844008',
       },
     },
   },
