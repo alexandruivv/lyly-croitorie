@@ -44,7 +44,7 @@ const DespreCeEVorba = () => {
         <h1 className="font-bold text-4xl md:text-5xl text-center">
           Cum procedam?
         </h1>
-        <div className="grid grid-cols-3 gap-4 md:gap-8">
+        <div className="grid md:grid-cols-3 gap-4 md:gap-8">
           {descrieri.map((descriere, index) => (
             <CumProcedamDescriere
               key={index}
