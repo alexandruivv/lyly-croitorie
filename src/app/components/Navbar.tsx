@@ -20,17 +20,17 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 bg-peach text-black shadow-md h-24 flex justify-between items-center w-full md:px-20 md:py-14 z-50">
-      <button className="md:hidden hover:cursor-pointer z-40 h-24">
+    <nav className="fixed top-0 left-0 bg-peach text-black shadow-md h-24 flex justify-between items-center w-full lg:px-20 lg:py-14 z-50">
+      <button className="lg:hidden hover:cursor-pointer z-40 h-24">
         <Image src={drawer} alt="drawer" className="h-10"></Image>
       </button>
       <Link
         href="/"
-        className="h-24 flex-1 md:flex-none text-center md:text-left absolute inset-0 flex justify-center items-center md:static md:justify-start"
+        className="h-24 flex-1 lg:flex-none text-center lg:text-left absolute inset-0 flex justify-center items-center lg:static lg:justify-start"
       >
         <Image src={logo} alt="logo" className="h-full object-contain" />
       </Link>
-      <ul className="hidden md:flex space-x-12">
+      <ul className="hidden lg:flex space-x-12">
         {getLink("Acasă")}
         {getLink("Cum procedăm?")}
         {getLink("Despre noi")}
