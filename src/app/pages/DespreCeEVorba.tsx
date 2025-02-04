@@ -39,7 +39,7 @@ const DespreCeEVorba = () => {
         <div className="absolute inset-0 bg-white bg-opacity-80"></div>
 
         <div className="relative h-full flex flex-col justify-evenly p-16 md:p-10 text-black">
-          <h1 className="font-bold text-4xl md:text-5xl text-center max-md: mt-10 md:my-10">
+          <h1 className="font-bold text-2xl md:text-5xl text-center max-md:mt-5 md:my-10">
             Cum procedam?
           </h1>
           <div className="grid md:grid-cols-3 gap-4 md:gap-8">
