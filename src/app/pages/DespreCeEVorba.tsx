@@ -34,30 +34,28 @@ const descrieri: Descriere[] = [
 
 const DespreCeEVorba = () => {
   return (
-    <div id="despre-ce-e-vorba" className="relative w-full h-screen">
-      <Image
-        src={despreCeEVorbaBg}
-        alt="bg-despre-ce-e-vorba"
-        className="h-full w-full object-cover opacity-20 absolute"
-      />
-      <div className="relative h-full flex flex-col justify-evenly p-16 md:p-6 md:p-10 text-black">
-        <h1 className="font-bold text-4xl md:text-5xl text-center max-md: mt-10 md:my-10">
-          Cum procedam?
-        </h1>
-        <div className="grid md:grid-cols-3 gap-4 md:gap-8">
-          {descrieri.map((descriere, index) => (
-            <CumProcedamDescriere
-              key={index}
-              numar={descriere.numar}
-              icon={descriere.icon}
-              descriere={descriere.descriere}
-            />
-          ))}
+      <div id="despre-ce-e-vorba"
+           className="relative w-full h-screen bg-cover bg-center bg-no-repeat bg-[url('/images/despre_ce_e_vorba_bg_mobile.webp')] md:bg-[url('/images/despre_ce_e_vorba_bg.webp')]">
+        <div className="absolute inset-0 bg-white bg-opacity-80"></div>
+
+        <div className="relative h-full flex flex-col justify-evenly p-16 md:p-10 text-black">
+          <h1 className="font-bold text-4xl md:text-5xl text-center max-md: mt-10 md:my-10">
+            Cum procedam?
+          </h1>
+          <div className="grid md:grid-cols-3 gap-4 md:gap-8">
+            {descrieri.map((descriere, index) => (
+                <CumProcedamDescriere
+                    key={index}
+                    numar={descriere.numar}
+                    icon={descriere.icon}
+                    descriere={descriere.descriere}
+                />
+            ))}
+          </div>
+          <Button text="Programează acum!" className="mx-auto"/>
+          <GoDownArrow className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-4"/>
         </div>
-        <Button text="Programează acum!" className="mx-auto" />
-        <GoDownArrow className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-4" />
       </div>
-    </div>
   );
 };
 
