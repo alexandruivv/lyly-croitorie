@@ -9,9 +9,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        peach: '#FADCC3',
-        brownHover: '#844008',
-        secondary: '#97D0FF'
+        peach: "#FADCC3",
+        brownHover: "#844008",
+        secondary: "#97D0FF",
       },
     },
   },
