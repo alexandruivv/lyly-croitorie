@@ -6,7 +6,7 @@ import { scrollToSection } from "../utils/utils";
 
 const HomePage = () => {
   return (
-    <div className="relative w-full h-screen bg-cover bg-center bg-no-repeat bg-[url('/images/home_image_mobile.png')] md:bg-[url('/images/home_image_desktop.png')]">
+    <div className="relative w-full h-full bg-cover bg-center bg-no-repeat bg-[url('/images/home_image_mobile.png')] md:bg-[url('/images/home_image_desktop.png')]">
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
       <div className="absolute left-4 bottom-1/4 md:left-20 text-peach max-w-2xl w-fit font-bold text-shadow">

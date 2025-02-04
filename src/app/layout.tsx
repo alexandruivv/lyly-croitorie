@@ -15,8 +15,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.className} font-medium`}>
+      <div className="main-container">
         <Navbar />
         <main>{children}</main>
+      </div>
       </body>
     </html>
   );

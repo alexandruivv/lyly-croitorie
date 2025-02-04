@@ -34,7 +34,7 @@ const descrieri: Descriere[] = [
 
 const DespreCeEVorba = () => {
   return (
-    <div id="despre-ce-e-vorba" className="relative w-full h-screen">
+    <div id="despre-ce-e-vorba" className="relative w-full h-full">
       <Image
         src={despreCeEVorbaBg}
         alt="bg-despre-ce-e-vorba"
