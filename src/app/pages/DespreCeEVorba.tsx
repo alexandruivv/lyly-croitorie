@@ -34,14 +34,14 @@ const descrieri: Descriere[] = [
 
 const DespreCeEVorba = () => {
   return (
-    <div id="despre-ce-e-vorba" className="relative w-full h-full">
+    <div id="despre-ce-e-vorba" className="relative w-full h-screen">
       <Image
         src={despreCeEVorbaBg}
         alt="bg-despre-ce-e-vorba"
         className="h-full w-full object-cover opacity-20 absolute"
       />
       <div className="relative h-full flex flex-col justify-evenly p-6 md:p-10 text-black">
-        <h1 className="font-bold text-4xl md:text-5xl text-center">
+        <h1 className="font-bold text-4xl md:text-5xl text-center mb-10">
           Cum procedam?
         </h1>
         <div className="grid md:grid-cols-3 gap-4 md:gap-8">
