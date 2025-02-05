@@ -4,17 +4,43 @@ import Link from "next/link";
 import logo from "../../../public/images/LOGO.png";
 import Image from "next/image";
 import drawer from "../../../public/svg/drawer.svg";
+import {scrollToSection} from "@/app/utils/utils";
 
 const Navbar = () => {
   const getLink = (name: string) => {
-    return (
-      <li>
-        <Link
-          href="/"
-          className="hover:text-brownHover transition duration-300 text-xl"
+      const scrollToCorrespondingPage = () => {
+          let sectionName = '';
+          switch (name) {
+              case 'Acasă':
+                  sectionName = 'acasa'
+                  break;
+              case 'Cum procedăm?':
+                  sectionName = 'despre-ce-e-vorba'
+                  break;
+              case 'Despre noi':
+                  sectionName = 'despre-noi'
+                  break;
+              case 'Servicii':
+                  sectionName = 'servicii';
+                  break;
+              case  'Programări':
+                  sectionName = 'programari'
+                  break;
+              default :
+                  sectionName = '';
+          }
+          if (sectionName) {
+              scrollToSection(sectionName);
+          }
+      }
+
+      return (
+      <li onClick={scrollToCorrespondingPage}>
+        <p
+          className="hover:text-brownHover transition duration-300 text-xl cursor-pointer"
         >
           {name}
-        </Link>
+        </p>
       </li>
     );
   };

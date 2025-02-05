@@ -3,6 +3,7 @@
 import ServiciiDescriere from "../components/ServiciiDescriere";
 import GoDownArrow from "../components/GoDownArrow";
 import Button from "../components/Button";
+import {scrollToSection} from "@/app/utils/utils";
 
 const Servicii = () => {
   return (
@@ -29,7 +30,8 @@ const Servicii = () => {
           />
         </div>
         <Button text="Programează acum!" className="mx-auto" />
-        <GoDownArrow className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-4" />
+        <GoDownArrow className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-4"
+                     onClick={() => scrollToSection("despre-noi") }/>
       </div>
     </div>
   );
