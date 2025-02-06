@@ -2,6 +2,7 @@ import DespreCeEVorba from "@/app/pages/DespreCeEVorba";
 import HomePage from "./pages/HomePage";
 import Servicii from "./pages/Servicii";
 import DespreNoi from "@/app/pages/DespreNoi";
+import Programari from "@/app/pages/Programari";
 
 export default function Home() {
   return (
@@ -17,6 +18,9 @@ export default function Home() {
           </section>
           <section>
               <DespreNoi/>
+          </section>
+          <section>
+              <Programari/>
           </section>
       </>
   );

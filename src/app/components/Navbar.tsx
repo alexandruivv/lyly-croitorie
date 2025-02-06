@@ -46,13 +46,13 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 bg-peach text-black shadow-md h-24 flex justify-between items-center w-full lg:px-20 lg:py-14 z-50">
-      <button className="lg:hidden hover:cursor-pointer z-40 h-24">
-        <Image src={drawer} alt="drawer" className="h-10"></Image>
+    <nav className="fixed top-0 left-0 bg-peach text-black shadow-md h-16 md:h-24 flex justify-between items-center w-full lg:px-20 z-50 box-border">
+      <button className="lg:hidden hover:cursor-pointer z-40 h-16 md:h-24">
+        <Image src={drawer} alt="drawer" className="h-8 md:h-10"></Image>
       </button>
       <Link
         href="/"
-        className="h-24 flex-1 lg:flex-none text-center lg:text-left absolute inset-0 flex justify-center items-center lg:static lg:justify-start"
+        className="h-16 md:h-24 flex-1 lg:flex-none text-center lg:text-left absolute inset-0 flex justify-center items-center lg:static lg:justify-start"
       >
         <Image src={logo} alt="logo" className="h-full object-contain" />
       </Link>

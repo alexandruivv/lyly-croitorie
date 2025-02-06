@@ -9,7 +9,7 @@ import boxIcon from "../../../public/images/Box.png";
 
 import keyboardReturnIcon from "../../../public/images/keyboard_return.png";
 import Button from "@/app/components/Button";
-import GoDownArrow from "@/app/components/GoDownArrow";
+import GoArrow from "@/app/components/GoArrow";
 import { scrollToSection } from "../utils/utils";
 
 const descrieri: Descriere[] = [
@@ -54,7 +54,7 @@ const DespreCeEVorba = () => {
           ))}
         </div>
         <Button text="Programează acum!" className="mx-auto" />
-        <GoDownArrow
+        <GoArrow
           className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-4"
           onClick={() => scrollToSection("servicii")}
         />

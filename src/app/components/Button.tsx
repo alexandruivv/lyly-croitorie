@@ -9,7 +9,6 @@ interface Props {
 const hoverAnimation = `
   before:ease
   relative
-  overflow-hidden
   transition-all
   before:absolute
   before:right-0

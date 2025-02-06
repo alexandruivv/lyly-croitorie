@@ -1,7 +1,7 @@
 "use client";
 
 import ServiciiDescriere from "../components/ServiciiDescriere";
-import GoDownArrow from "../components/GoDownArrow";
+import GoArrow from "../components/GoArrow";
 import Button from "../components/Button";
 import {scrollToSection} from "@/app/utils/utils";
 
@@ -13,7 +13,7 @@ const Servicii = () => {
     >
       <div className="absolute inset-0 bg-white bg-opacity-80"></div>
 
-      <div className="relative h-full flex flex-col justify-evenly p-16 md:p-10 text-black">
+      <div className="relative h-full flex flex-col justify-evenly py-16 md:p-10 text-black">
         <h1 className="font-bold text-2xl md:text-5xl text-center max-md:mt-5 md:my-10">
           Servicii
         </h1>
@@ -30,8 +30,8 @@ const Servicii = () => {
           />
         </div>
         <Button text="Programează acum!" className="mx-auto" />
-        <GoDownArrow className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-4"
-                     onClick={() => scrollToSection("despre-noi") }/>
+        <GoArrow className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-4"
+                 onClick={() => scrollToSection("despre-noi") }/>
       </div>
     </div>
   );
