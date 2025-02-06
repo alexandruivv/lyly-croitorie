@@ -13,7 +13,7 @@ const ServiciiDescriere: React.FC<Props> = ({
   secondParagraph,
 }: Props) => {
   return (
-    <div className="bg-peach p-3 md:p-6 rounded-lg shadow-lg w-[90vw] md:max-w-xl  flex flex-col text-black">
+    <div className="bg-peach p-3 md:p-6 rounded-lg shadow-lg w-[90vw] md:max-w-xl  flex flex-col text-black min-h-[10rem] sm:min-h-[12rem] md:min-h-[18rem]">
       <h2 className="text-lg md:text-3xl font-bold mb-2 md:mb-8 text-center -mt-1 md:-mt-2">
         {title}
       </h2>
