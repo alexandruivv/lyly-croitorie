@@ -1,5 +1,6 @@
 import goDownArrow from "../../../public/svg/go-down-arrow.svg";
 import goUpArrow from "../../../public/svg/go-up-arrow.svg";
+import goLeftArrow from "../../../public/svg/go-left-arrow.svg";
 import Image from "next/image";
 
 interface Props {
@@ -9,7 +10,7 @@ interface Props {
 }
 
 export enum GoArrowDirection {
-  UP='up', DOWN='down'
+  UP='up', DOWN='down', LEFT='left'
 }
 
 const GoArrow: React.FC<Props> = ({ className, onClick, direction }: Props) => {
@@ -20,6 +21,8 @@ const GoArrow: React.FC<Props> = ({ className, onClick, direction }: Props) => {
     }
     if (direction === GoArrowDirection.UP) {
       return goUpArrow;
+    } else if (direction === GoArrowDirection.LEFT) {
+      return goLeftArrow;
     }
     return goDownArrow;
   }
