@@ -4,7 +4,10 @@ import GoArrow from "../components/GoArrow";
 import Button from "../components/Button";
 import ImageText from "@/app/components/ImageText";
 import checkIcon from '../../../public/images/check_icon.png';
+import bgImg from '../../../public/images/despre_ce_e_vorba_bg.webp';
+import bgMobileImg from '../../../public/images/despre_ce_e_vorba_bg_mobile.webp';
 import {scrollToSection} from "@/app/utils/utils";
+import {CustomCSSProperties} from "@/app/types/CustomCSSProperties";
 
 const servicii: string[] = [
     'Experienta in croitorie de peste 10 ani',
@@ -17,7 +20,8 @@ const Servicii = () => {
   return (
     <div
       id="despre-noi"
-      className="relative w-full h-screen bg-cover bg-center bg-no-repeat bg-[url('/images/despre_ce_e_vorba_bg_mobile.webp')] lg:bg-[url('/images/despre_ce_e_vorba_bg.webp')]"
+      style={{'--mobile-image-url': `url(${bgMobileImg.src})`, '--image-url': `url(${bgImg.src})`} as CustomCSSProperties}
+      className="relative w-full h-screen bg-cover bg-center bg-no-repeat bg-[image:var(--mobile-image-url)] lg:bg-[image:var(--image-url)]"
     >
       <div className="absolute inset-0 bg-white bg-opacity-80"></div>
 

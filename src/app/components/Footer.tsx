@@ -60,7 +60,7 @@ const footerColumns: FooterColumn[] = [
     links: [
       {
         text: "ONLINE DISPUTE RESOLUTION",
-        href: "https://ec.europa.eu/consumers/odr/",
+        href: "https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=RO",
       },
       { text: "ANPC", href: "https://anpc.ro/" },
     ],

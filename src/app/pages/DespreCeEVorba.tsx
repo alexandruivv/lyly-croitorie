@@ -11,6 +11,9 @@ import keyboardReturnIcon from "../../../public/images/keyboard_return.png";
 import Button from "@/app/components/Button";
 import GoArrow from "@/app/components/GoArrow";
 import { scrollToSection } from "../utils/utils";
+import bgMobileImg from "../../../public/images/despre_ce_e_vorba_bg_mobile.webp";
+import bgImg from "../../../public/images/despre_ce_e_vorba_bg.webp";
+import {CustomCSSProperties} from "@/app/types/CustomCSSProperties";
 
 const descrieri: Descriere[] = [
   {
@@ -35,7 +38,8 @@ const DespreCeEVorba = () => {
   return (
     <div
       id="despre-ce-e-vorba"
-      className="relative w-full h-screen bg-cover bg-center bg-no-repeat bg-[url('/images/despre_ce_e_vorba_bg_mobile.webp')] md:bg-[url('/images/despre_ce_e_vorba_bg.webp')]"
+      style={{'--mobile-image-url': `url(${bgMobileImg.src})`, '--image-url': `url(${bgImg.src})`} as CustomCSSProperties}
+      className="relative w-full h-screen bg-cover bg-center bg-no-repeat bg-[image:var(--mobile-image-url)] md:bg-[image:var(--image-url)]"
     >
       <div className="absolute inset-0 bg-white bg-opacity-80"></div>
 
