@@ -27,7 +27,7 @@ const Programari = () => {
     >
       <div className="absolute inset-0 bg-white bg-opacity-80"></div>
 
-      <div className="relative h-full flex flex-col justify-between pt-24 pb-16 md:pt-28 md:pb-8 text-black">
+      <div className="relative h-full flex flex-col justify-between pt-24 pb-32 md:pt-28 md:pb-8 text-black">
         <h1 className="font-bold text-2xl md:text-5xl text-center">
           Programări
         </h1>
@@ -90,11 +90,14 @@ const Programari = () => {
               id="mesaj"
               placeholder="Introduceti mesajul..."
             />
-            <Button text="Programează acum!" className="mt-3 mx-auto" />
+            <Button
+              text="Programează acum!"
+              className="mt-3 max-md:mt-8 mx-auto"
+            />
           </form>
         </div>
 
-        <div className="relative h-12 w-full">
+        <div className="relative h-12 w-full max-md:-mt-8">
           <GoArrow
             className="absolute left-1/2 transform -translate-x-1/2 top-0"
             direction={GoArrowDirection.UP}
