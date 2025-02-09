@@ -1,7 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: "export",
+  reactStrictMode: true,
+  basePath: './',
+  assetPrefix: './',
+  images: {
+    unoptimized: true, // Disable default image optimization
+  },
 };
 
 export default nextConfig;
