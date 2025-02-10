@@ -1,6 +1,6 @@
 import type { NextConfig } from "next";
 
-const isProd = true;
+const isProd = false;
 
 const nextConfig: NextConfig = {
   output: "export",
