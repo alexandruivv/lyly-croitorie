@@ -1,6 +1,6 @@
 import type { NextConfig } from "next";
 
-const isProd = false;
+const isProd = true;
 
 const nextConfig: NextConfig = {
   output: "export",
@@ -11,5 +11,7 @@ const nextConfig: NextConfig = {
     unoptimized: true, // Disable default image optimization
   }
 };
+
+module.exports = nextConfig;
 
 export default nextConfig;
