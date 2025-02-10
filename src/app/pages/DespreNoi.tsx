@@ -3,7 +3,7 @@
 import GoArrow from "../components/GoArrow";
 import Button from "../components/Button";
 import ImageText from "@/app/components/ImageText";
-import checkIcon from "../../../public/images/check_icon.png";
+import checkIcon from "../../../public/svg/check-square.svg";
 import bgImg from "../../../public/images/despre_ce_e_vorba_bg.webp";
 import bgMobileImg from "../../../public/images/despre_ce_e_vorba_bg_mobile.webp";
 import { scrollToSection } from "@/app/utils/utils";

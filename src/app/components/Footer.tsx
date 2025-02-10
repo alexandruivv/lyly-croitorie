@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import phoneIcon from "../../../public/images/phone.png";
-import mailIcon from "../../../public/images/mail.png";
-import clockIcon from "../../../public/images/clock.png";
+import phoneIcon from "../../../public/svg/phone.svg";
+import mailIcon from "../../../public/svg/mail.svg";
+import clockIcon from "../../../public/svg/clock.svg";
 import { StaticImageData } from "next/image";
 import { scrollToSection } from "@/app/utils/utils";
 

@@ -4,10 +4,10 @@ import React from "react";
 import CumProcedamDescriere, {
   Descriere,
 } from "@/app/components/CumProcedamDescriere";
-import truckIcon from "../../../public/images/Truck.png";
-import boxIcon from "../../../public/images/Box.png";
+import truckIcon from "../../../public/svg/truck.svg";
+import boxIcon from "../../../public/svg/truck.svg";
 
-import keyboardReturnIcon from "../../../public/images/keyboard_return.png";
+import keyboardReturnIcon from "../../../public/svg/keyboard_return.svg";
 import Button from "@/app/components/Button";
 import GoArrow from "@/app/components/GoArrow";
 import { scrollToSection } from "../utils/utils";

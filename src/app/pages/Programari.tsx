@@ -3,10 +3,10 @@
 import GoArrow, { GoArrowDirection } from "../components/GoArrow";
 import Button from "../components/Button";
 import ImageText from "@/app/components/ImageText";
-import clockImg from "../.././../public/images/clock.png";
-import fbImg from "../.././../public/images/Facebook.png";
-import mailImg from "../.././../public/images/mail.png";
-import phoneImg from "../.././../public/images/phone.png";
+import clockImg from "../.././../public/svg/clock.svg";
+import fbImg from "../.././../public/svg/facebook.svg";
+import mailImg from "../.././../public/svg/mail.svg";
+import phoneImg from "../.././../public/svg/phone.svg";
 import FormField, { FormFieldType } from "@/app/components/FormField";
 import { scrollToSection } from "@/app/utils/utils";
 import bgMobileImg from "../../../public/images/despre_ce_e_vorba_bg_mobile.webp";
