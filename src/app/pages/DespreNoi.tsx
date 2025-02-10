@@ -46,7 +46,11 @@ const Servicii = () => {
             />
           ))}
         </div>
-        <Button text="Programează acum!" className="mx-auto max-md:mb-8" />
+        <Button
+          text="Programează acum!"
+          className="mx-auto max-md:mb-8"
+          onClick={() => scrollToSection("programari")}
+        />
         <GoArrow
           className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-20 md:mb-4"
           onClick={() => scrollToSection("programari")}

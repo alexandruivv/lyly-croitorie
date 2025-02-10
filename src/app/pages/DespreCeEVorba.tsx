@@ -62,7 +62,11 @@ const DespreCeEVorba = () => {
             />
           ))}
         </div>
-        <Button text="Programează acum!" className="mx-auto" />
+        <Button
+          text="Programează acum!"
+          className="mx-auto"
+          onClick={() => scrollToSection("programari")}
+        />
         <GoArrow
           className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-20 md:mb-4"
           onClick={() => scrollToSection("servicii")}

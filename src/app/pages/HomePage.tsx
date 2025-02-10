@@ -29,7 +29,11 @@ const HomePage = () => {
           Venim direct la domiciliul tău pentru soluții rapide de croitorie și
           retuș personalizat!
         </h3>
-        <Button text="Programează acum!" className="mt-6" />
+        <Button
+          text="Programează acum!"
+          className="mt-6"
+          onClick={() => scrollToSection("programari")}
+        />
       </div>
 
       <GoArrow

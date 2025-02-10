@@ -7,29 +7,31 @@ interface Props {
 }
 
 const hoverAnimation = `
-  before:ease
   relative
+  overflow-hidden
   transition-all
-  before:absolute
-  before:right-0
-  before:top-0
-  before:h-16
-  before:w-12
-  before:translate-x-12
-  before:rotate-6
-  before:bg-white
-  before:opacity-10
-  before:duration-700
-  hover:before:-translate-x-40
+  duration-300
+  ease-in-out
+  active:scale-95
+  after:absolute
+  after:inset-0
+  after:bg-peach
+  after:origin-left
+  after:scale-x-0
+  after:transition-transform
+  after:duration-300
+  after:ease-out
+  md:hover:after:scale-x-100
+  group
 `;
 
 const Button: React.FC<Props> = ({ text, className, onClick }: Props) => {
   return (
     <button
       onClick={onClick}
-      className={`bg-secondary text-black rounded-3xl shadow-lg px-5 py-3 sm:py-5 font-normal transition-shadow duration-30 ${hoverAnimation} ${className}`}
+      className={`bg-secondary text-black rounded-3xl shadow-lg px-5 py-3 sm:py-5 font-normal ${hoverAnimation} ${className}`}
     >
-      {text}
+      <span className="relative z-10">{text}</span>
     </button>
   );
 };
