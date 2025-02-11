@@ -23,7 +23,7 @@ const Programari = () => {
           "--image-url": `url(${bgImg.src})`,
         } as CustomCSSProperties
       }
-      className="relative w-full h-screen bg-cover bg-center bg-no-repeat bg-[image:var(--mobile-image-url)] lg:bg-[image:var(--image-url)]"
+      className="relative w-full min-h-screen overflow-y-auto bg-cover bg-center bg-no-repeat bg-[image:var(--mobile-image-url)] lg:bg-[image:var(--image-url)]"
     >
       <div className="absolute inset-0 bg-white bg-opacity-80"></div>
 
@@ -65,44 +65,47 @@ const Programari = () => {
             </div>
           </div>
 
-          <form className="flex flex-col gap-1.5 lg:px-8">
-            <FormField
-              label="Nume"
-              type={FormFieldType.TEXT}
-              id="nume"
-              placeholder="Introduceti numele..."
-            />
-            <FormField
-              label="Telefon"
-              type={FormFieldType.TEXT}
-              id="telefon"
-              placeholder="Introduceti telefonul..."
-            />
-            <FormField
-              label="Email"
-              type={FormFieldType.TEXT}
-              id="email"
-              placeholder="Introduceti emailul..."
-            />
-            <FormField
-              label="Mesaj"
-              type={FormFieldType.TEXTAREA}
-              id="mesaj"
-              placeholder="Introduceti mesajul..."
-            />
-            <Button
-              text="Programează acum!"
-              className="mt-3 max-md:mt-8 mx-auto"
-            />
+          <form className="flex flex-col gap-1.5 lg:px-8 h-full">
+            <div className="w-full flex flex-col gap-8">
+              <div className="form-container w-full flex flex-col gap-4">
+                <div className="form-inputs-container flex flex-col gap-1.5 w-full justify-center">
+                  <div className="w-full">
+                    <FormField
+                      label="Nume"
+                      type={FormFieldType.TEXT}
+                      id="nume"
+                      placeholder="Introduceti numele..."
+                    />
+                  </div>
+                  <div className="w-full">
+                    <FormField
+                      label="Telefon"
+                      type={FormFieldType.TEXT}
+                      id="telefon"
+                      placeholder="Introduceti telefonul..."
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-col gap-1.5 w-full">
+                  <FormField
+                    label="Email"
+                    type={FormFieldType.TEXT}
+                    id="email"
+                    placeholder="Introduceti emailul..."
+                  />
+                  <FormField
+                    label="Mesaj"
+                    type={FormFieldType.TEXTAREA}
+                    id="mesaj"
+                    placeholder="Introduceti mesajul..."
+                  />
+                </div>
+              </div>
+              <div className="flex justify-center pb-8">
+                <Button text="Programează acum!" />
+              </div>
+            </div>
           </form>
-        </div>
-
-        <div className="relative h-12 w-full max-md:-mt-8">
-          <GoArrow
-            className="absolute left-1/2 transform -translate-x-1/2 top-0"
-            direction={GoArrowDirection.UP}
-            onClick={() => scrollToSection("acasa")}
-          />
         </div>
       </div>
     </div>
