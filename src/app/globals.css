@@ -32,3 +32,13 @@ body {
 section {
   scroll-snap-align: start;
 }
+
+@media screen and (max-height: 900px) {
+  .form-inputs-container {
+    flex-direction: row !important;
+  }
+
+  .form-inputs-container > div {
+    width: 50% !important;
+  }
+}
