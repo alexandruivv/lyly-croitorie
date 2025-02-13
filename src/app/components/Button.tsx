@@ -1,9 +1,14 @@
 "use client";
 
+import React from "react";
+import { ClipLoader } from "react-spinners";
+
 interface Props {
   text: string;
   className?: string;
   onClick?: () => void;
+  disabled?: boolean;
+  loading?: boolean;
 }
 
 const hoverAnimation = `
@@ -25,12 +30,36 @@ const hoverAnimation = `
   group
 `;
 
-const Button: React.FC<Props> = ({ text, className, onClick }: Props) => {
+const Button: React.FC<Props> = ({
+  text,
+  className = "",
+  onClick,
+  disabled = false,
+  loading = false,
+}: Props) => {
   return (
     <button
       onClick={onClick}
-      className={`bg-secondary text-black rounded-3xl shadow-lg px-5 py-3 sm:py-5 font-normal ${hoverAnimation} ${className}`}
+      disabled={disabled}
+      className={`
+        rounded-3xl shadow-lg px-5 py-3 sm:py-5 font-normal flex items-center justify-center
+        ${
+          disabled
+            ? `
+              bg-gray-400 text-gray-700 cursor-not-allowed
+              opacity-50
+              transition-colors duration-300
+            `
+            : `
+              bg-secondary text-black cursor-pointer
+              ${hoverAnimation}
+            `
+        }
+        ${className}
+      `}
+      aria-disabled={disabled}
     >
+      {loading && <ClipLoader size={20} color="#000" className="mr-2" />}
       <span className="relative z-10">{text}</span>
     </button>
   );
