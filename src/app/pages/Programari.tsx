@@ -1,6 +1,6 @@
 "use client";
 
-import GoArrow, { GoArrowDirection } from "../components/GoArrow";
+import { useState } from "react";
 import Button from "../components/Button";
 import ImageText from "@/app/components/ImageText";
 import clockImg from "../.././../public/svg/clock.svg";
@@ -8,12 +8,128 @@ import fbImg from "../.././../public/svg/facebook.svg";
 import mailImg from "../.././../public/svg/mail.svg";
 import phoneImg from "../.././../public/svg/phone.svg";
 import FormField, { FormFieldType } from "@/app/components/FormField";
-import { scrollToSection } from "@/app/utils/utils";
 import bgMobileImg from "../../../public/images/despre_ce_e_vorba_bg_mobile.webp";
 import bgImg from "../../../public/images/despre_ce_e_vorba_bg.webp";
 import { CustomCSSProperties } from "@/app/types/CustomCSSProperties";
+import CaptchaWrapper from "../components/CaptchaWrapper";
+import { toast } from "react-toastify";
+import { VerifyCaptchaResponse, sendEmail } from "../services/apiClient";
 
 const Programari = () => {
+  const [showCaptcha, setShowCaptcha] = useState(false);
+
+  const [formData, setFormData] = useState({
+    nume: "",
+    telefon: "",
+    email: "",
+    mesaj: "",
+  });
+
+  const [isLoading, setIsLoading] = useState(false);
+
+  const [errors, setErrors] = useState({
+    nume: "",
+    telefon: "",
+    email: "",
+    mesaj: "",
+  });
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { id, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [id]: value,
+    }));
+    setErrors((prev) => ({
+      ...prev,
+      [id]: "",
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    let valid = true;
+    const newErrors = {
+      nume: "",
+      telefon: "",
+      email: "",
+      mesaj: "",
+    };
+
+    if (!formData.nume.trim()) {
+      newErrors.nume = "Numele este obligatoriu.";
+      valid = false;
+    }
+    if (!formData.telefon.trim()) {
+      newErrors.telefon = "Telefonul este obligatoriu.";
+      valid = false;
+    }
+    if (!formData.email.trim()) {
+      newErrors.email = "Email-ul este obligatoriu.";
+      valid = false;
+    }
+    if (!formData.mesaj.trim()) {
+      newErrors.mesaj = "Mesajul este obligatoriu.";
+      valid = false;
+    }
+
+    setErrors(newErrors);
+
+    if (!valid) {
+      toast.error("Vă rugăm să completați toate câmpurile.");
+      return;
+    }
+
+    setShowCaptcha(true);
+  };
+
+  const handleCaptchaVerify = async (response: VerifyCaptchaResponse) => {
+    setShowCaptcha(false);
+    if (!response.success || !response.token) {
+      toast.error("Eroare. Vă rugăm să reîncercați.");
+      return;
+    }
+
+    setIsLoading(true);
+
+    try {
+      const emailSent = await sendEmail(
+        formData.email,
+        formData.nume,
+        formData.telefon,
+        formData.mesaj,
+        response.token
+      );
+
+      if (emailSent) {
+        toast.success("Mesajul a fost trimis cu succes!");
+        setFormData({
+          nume: "",
+          telefon: "",
+          email: "",
+          mesaj: "",
+        });
+      } else {
+        toast.error(
+          "Eroare la trimiterea mesajului. Vă rugăm să încercați din nou."
+        );
+      }
+    } catch (error: any) {
+      const errorMessage =
+        error.response?.data?.message || "A apărut o eroare neașteptată.";
+      toast.error(errorMessage);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleCloseCaptcha = () => {
+    setShowCaptcha(false);
+  };
+
   return (
     <div
       id="programari"
@@ -65,48 +181,61 @@ const Programari = () => {
             </div>
           </div>
 
-          <form className="flex flex-col gap-1.5 lg:px-8 h-full">
-            <div className="w-full flex flex-col gap-8">
-              <div className="form-container w-full flex flex-col gap-4">
-                <div className="form-inputs-container flex flex-col gap-1.5 w-full justify-center">
-                  <div className="w-full">
-                    <FormField
-                      label="Nume"
-                      type={FormFieldType.TEXT}
-                      id="nume"
-                      placeholder="Introduceti numele..."
-                    />
-                  </div>
-                  <div className="w-full">
-                    <FormField
-                      label="Telefon"
-                      type={FormFieldType.TEXT}
-                      id="telefon"
-                      placeholder="Introduceti telefonul..."
-                    />
-                  </div>
-                </div>
-                <div className="flex flex-col gap-1.5 w-full">
-                  <FormField
-                    label="Email"
-                    type={FormFieldType.TEXT}
-                    id="email"
-                    placeholder="Introduceti emailul..."
-                  />
-                  <FormField
-                    label="Mesaj"
-                    type={FormFieldType.TEXTAREA}
-                    id="mesaj"
-                    placeholder="Introduceti mesajul..."
-                  />
-                </div>
-              </div>
-              <div className="flex justify-center pb-8">
-                <Button text="Programează acum!" />
-              </div>
-            </div>
+          <form
+            className="flex flex-col gap-1.5 lg:px-8"
+            onSubmit={handleSubmit}
+          >
+            <FormField
+              label="Nume"
+              type={FormFieldType.TEXT}
+              id="nume"
+              placeholder="Introduceti numele..."
+              value={formData.nume}
+              onChange={handleInputChange}
+              error={errors.nume}
+            />
+            <FormField
+              label="Telefon"
+              type={FormFieldType.TEXT}
+              id="telefon"
+              placeholder="Introduceti telefonul..."
+              value={formData.telefon}
+              onChange={handleInputChange}
+              error={errors.telefon}
+            />
+            <FormField
+              label="Email"
+              type={FormFieldType.TEXT}
+              id="email"
+              placeholder="Introduceti emailul..."
+              value={formData.email}
+              onChange={handleInputChange}
+              error={errors.email}
+            />
+            <FormField
+              label="Mesaj"
+              type={FormFieldType.TEXTAREA}
+              id="mesaj"
+              placeholder="Introduceti mesajul..."
+              value={formData.mesaj}
+              onChange={handleInputChange}
+              error={errors.mesaj}
+            />
+            <Button
+              text="Programează acum!"
+              className="mt-3 max-md:mt-8 mx-auto"
+              disabled={isLoading}
+              loading={isLoading}
+            />
           </form>
         </div>
+
+        {showCaptcha && (
+          <CaptchaWrapper
+            onVerify={handleCaptchaVerify}
+            onClose={handleCloseCaptcha}
+          />
+        )}
       </div>
     </div>
   );
