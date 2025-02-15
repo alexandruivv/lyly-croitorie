@@ -35,7 +35,7 @@ const Intrebari = () => {
             <ImageText
               classNameImg="w-4 mb-12"
               classNameParagraph="mb-6"
-              elements="Un reprezentant vine la domiciliul tău pentru a prelua hainele sau
+              elements="Un reprezentant vine la domiciliul tău pentru a prelua produsele sau
               pentru a lua măsurători."
               img={numberOneImg}
             />
@@ -106,12 +106,12 @@ const Intrebari = () => {
       ),
     },
     {
-      question: "Se poate comanda și confecționarea unei haine de la zero?",
+      question: "Se poate comanda și confecționarea unui produs de la zero?",
       answer: (
         <div>
           <ImageText
             classNameImg="w-6 mb-12"
-            elements="Da! Realizăm haine personalizate, fie pe baza unei schițe, fie pornind de la un model dorit. Îți oferim consultanță pentru alegerea materialului, croielii și detaliilor."
+            elements="Da! Realizăm produse personalizate, fie pe baza unei schițe, fie pornind de la un model dorit. Îți oferim consultanță pentru alegerea materialului, croielii și detaliilor."
             img={officePinImg}
           />
         </div>

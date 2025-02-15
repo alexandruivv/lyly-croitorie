@@ -235,7 +235,7 @@ const Programari = () => {
             <ImageText
               classNameImg="w-10 lg:w-12"
               classNameParagraph="text-xs lg:text-lg"
-              elements="Efectuăm lucrări în Piatra-Neamț și în apropiere"
+              elements="Preluăm comenzi în Piatra-Neamț și în apropiere"
               img={locationIcon}
             />
             <ImageText
