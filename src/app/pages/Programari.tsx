@@ -42,50 +42,71 @@ const Programari = () => {
       ...prev,
       [id]: value,
     }));
+    validateField(id, value);
+  };
+
+  const validateField = (field: string, value: string) => {
+    let errorMsg = "";
+
+    switch (field) {
+      case "nume":
+        if (!value.trim()) {
+          errorMsg = "Numele este obligatoriu.";
+        } else if (value.trim().length > 50) {
+          errorMsg = "Numele este de dimensiune prea mare.";
+        }
+        break;
+      case "telefon":
+        if (!value.trim()) {
+          errorMsg = "Telefonul este obligatoriu.";
+        } else if (!isPhoneValid(value.trim())) {
+          errorMsg = "Telefonul este incorect.";
+        }
+        break;
+      case "email":
+        if (!value.trim()) {
+          errorMsg = "Email-ul este obligatoriu.";
+        } else if (!isEmailValid(value.trim())) {
+          errorMsg = "Email-ul este invalid.";
+        } else if (value.trim().length > 50) {
+          errorMsg = "Email-ul este de dimensiune prea mare.";
+        }
+        break;
+      case "mesaj":
+        if (!value.trim()) {
+          errorMsg = "Mesajul este obligatoriu.";
+        } else if (value.trim().length > 1000) {
+          errorMsg = "Mesajul este de dimensiune prea mare.";
+        }
+        break;
+      default:
+        break;
+    }
+
     setErrors((prev) => ({
       ...prev,
-      [id]: "",
+      [field]: errorMsg,
     }));
+
+    return errorMsg;
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    let valid = true;
-    const newErrors = {
-      nume: "",
-      telefon: "",
-      email: "",
-      mesaj: "",
-    };
+    let hasErrors = false;
 
-    if (!formData.nume.trim()) {
-      newErrors.nume = "Numele este obligatoriu.";
-      valid = false;
-    }
-    if (!formData.telefon.trim()) {
-      newErrors.telefon = "Telefonul este obligatoriu.";
-      valid = false;
-    } else if (!isPhoneValid(formData.telefon.trim())) {
-      newErrors.telefon = "Telefonul este incorect.";
-      valid = false;
-    }
-    if (!formData.email.trim()) {
-      newErrors.email = "Email-ul este obligatoriu.";
-      valid = false;
-    } else if (!isEmailValid(formData.email.trim())) {
-      newErrors.email = "Email-ul este invalid.";
-      valid = false;
-    }
-    if (!formData.mesaj.trim()) {
-      newErrors.mesaj = "Mesajul este obligatoriu.";
-      valid = false;
-    }
+    Object.entries(formData).forEach(([field, value]) => {
+      const error = validateField(field, value);
+      if (error !== "") {
+        hasErrors = true;
+      }
+    });
 
-    setErrors(newErrors);
-
-    if (!valid) {
-      toast.error("Vă rugăm să completați toate câmpurile.");
+    if (hasErrors) {
+      toast.error(
+        "Vă rugăm să rezolvați toate erorile înainte de a trimite formularul."
+      );
       return;
     }
 
@@ -98,10 +119,10 @@ const Programari = () => {
   };
 
   const isPhoneValid = (phone: string) => {
-    const phonePattern = /^\+?\d{1,4}[\s.-]?\(?\d{1,4}\)?[\s.-]?\d{1,4}[\s.-]?\d{1,9}$/;
+    const phonePattern =
+      /^\+?\d{1,4}[\s.-]?\(?\d{1,4}\)?[\s.-]?\d{1,4}[\s.-]?\d{1,9}$/;
     return phonePattern.test(phone);
   };
-
 
   const handleCaptchaVerify = async (response: VerifyCaptchaResponse) => {
     setShowCaptcha(false);
@@ -124,6 +145,12 @@ const Programari = () => {
       if (emailSent) {
         toast.success("Mesajul a fost trimis cu succes!");
         setFormData({
+          nume: "",
+          telefon: "",
+          email: "",
+          mesaj: "",
+        });
+        setErrors({
           nume: "",
           telefon: "",
           email: "",

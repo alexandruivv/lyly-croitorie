@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { verifyCaptcha, VerifyCaptchaResponse } from "@/app/services/apiClient";
-import {environment} from "@/app/environment";
+import { environment } from "@/app/environment";
 
 interface Props {
   onVerify: (response: VerifyCaptchaResponse) => void;
