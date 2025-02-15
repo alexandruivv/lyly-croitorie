@@ -7,7 +7,7 @@ import CumProcedamDescriere, {
 import truckIcon from "../../../public/svg/truck.svg";
 import boxIcon from "../../../public/svg/box.svg";
 
-import keyboardReturnIcon from "../../../public/svg/keyboard_return.svg";
+import packageReturnIcon from "../../../public/svg/package-return-icon.svg";
 import Button from "@/app/components/Button";
 import GoArrow from "@/app/components/GoArrow";
 import { scrollToSection } from "../utils/utils";
@@ -29,7 +29,7 @@ const descrieri: Descriere[] = [
   },
   {
     numar: 3,
-    icon: keyboardReturnIcon,
+    icon: packageReturnIcon,
     descriere: "Returnăm ulterior produsele retușate conform dorințelor",
   },
 ];
