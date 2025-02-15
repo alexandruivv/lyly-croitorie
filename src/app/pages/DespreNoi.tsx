@@ -109,12 +109,12 @@ const Servicii = () => {
           <Image
             src={despreNoiImg}
             alt="despre-noi-image"
-            className="rounded-xl lg:w-4/12"
+            className="rounded-xl lg:w-2/12"
           />
           <Image
             src={despreNoiImg2}
             alt="despre-noi-image2"
-            className="rounded-xl  lg:w-4/12"
+            className="rounded-xl  lg:w-2/12"
           />
         </div>
 
@@ -138,7 +138,7 @@ const Servicii = () => {
         <div className="w-full flex items-center">
           <GoArrow
             className="w-20 mx-auto"
-            onClick={() => scrollToSection("intrebari")}
+            onClick={() => scrollToSection("lucrarile-noastre")}
           />
         </div>
       </div>

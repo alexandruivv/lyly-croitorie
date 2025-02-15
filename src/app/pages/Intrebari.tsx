@@ -152,7 +152,7 @@ const Intrebari = () => {
                   Email:
                   <a
                     className="font-bold text-secondary ml-2 cursor-pointer hover:text-brownHover transition duration-300"
-                    href="mailto:contact@lylycroitorie.ro"
+                    href="mailto:contact@lylydesign.ro"
                   >
                     contact@lylycroitorie.ro
                   </a>

@@ -7,28 +7,30 @@ import Footer from "@/app/components/Footer";
 import Intrebari from "./pages/Intrebari";
 import LucrarileNoastre from "@/app/pages/LucrarileNoastre";
 
+const sectionClassName= 'lg:min-h-[75vh]';
+
 export default function Home() {
   return (
     <>
-      <section>
+      <section className={sectionClassName}>
         <HomePage />
       </section>
-      <section>
+      <section className={sectionClassName}>
         <DespreCeEVorba />
       </section>
-      <section>
+      <section className={sectionClassName}>
         <Servicii />
       </section>
-      <section>
+      <section className={sectionClassName}>
         <DespreNoi/>
       </section>
-      <section>
+      <section className={sectionClassName}>
         <LucrarileNoastre />
       </section>
-      <section>
+      <section className={sectionClassName}>
         <Intrebari />
       </section>
-      <section>
+      <section className={sectionClassName}>
         <Programari />
       </section>
       <section>
