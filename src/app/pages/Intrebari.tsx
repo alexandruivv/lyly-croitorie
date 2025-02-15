@@ -154,7 +154,7 @@ const Intrebari = () => {
                     className="font-bold text-secondary ml-2 cursor-pointer hover:text-brownHover transition duration-300"
                     href="mailto:contact@lylydesign.ro"
                   >
-                    contact@lylycroitorie.ro
+                    contact@lylydesign.ro
                   </a>
                 </p>
               }
@@ -213,18 +213,6 @@ const Intrebari = () => {
       ),
     },
     {
-      question: "Ce metode de plată acceptați?",
-      answer: (
-        <div>
-          <ImageText
-            classNameImg="w-6 mb-6"
-            elements="Acceptăm plata cash, prin transfer bancar sau revolut. Momentan, nu acceptăm plata cu cardul."
-            img={officePinImg}
-          />
-        </div>
-      ),
-    },
-    {
       question: "Ce se întâmplă dacă nu sunt mulțumit de retuș?",
       answer: (
         <div>
@@ -243,7 +231,7 @@ const Intrebari = () => {
         <div>
           <ImageText
             classNameImg="w-6 mb-6"
-            elements="Da! Confecționăm rochii elegante, costume la comandă și ținute pentru ocazii speciale. Contactează-ne pentru o consultație personalizată!"
+            elements="Da! Confecționăm rochii elegante, costume la comandă și ținute pentru ocazii speciale doar cu materialul clientului. Contactează-ne pentru o consultație personalizată!"
             img={officePinImg}
           />
         </div>
@@ -280,7 +268,47 @@ const Intrebari = () => {
             ))}
           </div>
         </div>
-
+        <div className="w-full flex flex-col items-center">
+          <ImageText
+            classNameImg="w-6 mb-8"
+            elements={
+              <h1 className="text-2xl font-bold mb-8">
+                Nu ai găsit răspunsul dorit?
+              </h1>
+            }
+            img={officePinImg}
+          />
+          <ImageText
+            classNameImg="w-6"
+            elements={
+              <p>
+                Sună-ne la
+                <a
+                  className="font-bold text-secondary ml-2 cursor-pointer hover:text-brownHover transition duration-300 mr-2"
+                  href="tel:0742153656"
+                >
+                  0742 153 656
+                </a>
+                , scrie-ne pe
+                <a
+                  className="font-bold text-secondary ml-2 cursor-pointer hover:text-brownHover transition duration-300 mr-2"
+                  href="https://wa.me/40742153656"
+                >
+                  WhatsApp
+                </a>
+                sau accesează secțiunea
+                <a
+                  className="font-bold text-secondary ml-2 cursor-pointer hover:text-brownHover transition duration-300 mr-2"
+                  onClick={() => scrollToSection("programari")}
+                >
+                  Programări
+                </a>
+                pentru orice întrebare!
+              </p>
+            }
+            img={ideaImg}
+          />
+        </div>
         <Button
           text="Programează acum!"
           className="mx-auto"

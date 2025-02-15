@@ -23,11 +23,15 @@ const footerColumns: FooterColumn[] = [
   {
     title: "PROGRAMĂRI",
     links: [
-      { text: "Piatra-Neamt", icon: mapPin, onClick: () => scrollToSection("programari") },
+      {
+        text: "Piatra-Neamt",
+        icon: mapPin,
+        onClick: () => scrollToSection("programari"),
+      },
       { text: "0742 153 656", href: "tel:0742153656", icon: phoneIcon },
       {
-        text: "contact@lylycroitorie.ro",
-        href: "mailto:contact@lylycroitorie.ro",
+        text: "contact@lylydesign.ro",
+        href: "mailto:contact@lylydesign.ro",
         icon: mailIcon,
       },
       {
@@ -64,7 +68,7 @@ const footerColumns: FooterColumn[] = [
       {
         text: "ONLINE DISPUTE RESOLUTION",
         href: "https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=RO",
-        blank: true
+        blank: true,
       },
       { text: "ANPC", href: "https://anpc.ro/", blank: true },
     ],
@@ -88,7 +92,7 @@ const Footer = () => {
                 <a
                   key={linkIndex}
                   href={link.href}
-                  target={link.blank? '_blank': ''}
+                  target={link.blank ? "_blank" : ""}
                   onClick={link.onClick}
                   className="hover:text-brownHover transition-colors duration-300 flex items-center gap-2 justify-center sm:justify-start cursor-pointer"
                 >
