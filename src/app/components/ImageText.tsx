@@ -1,8 +1,8 @@
-import React from "react";
+import React, {ReactNode} from "react";
 import Image, { StaticImageData } from "next/image";
 
 interface Props {
-  text: string;
+  elements: ReactNode;
   classNameContainer?: string;
   classNameImg?: string;
   classNameParagraph?: string;
@@ -12,7 +12,7 @@ interface Props {
 }
 
 const ImageText = ({
-  text,
+  elements,
   classNameContainer,
   classNameImg,
   classNameParagraph,
@@ -23,8 +23,8 @@ const ImageText = ({
   const content = (
     <>
       <Image src={img} alt="check-icon" className={classNameImg} />
-      <span className={`font-semibold break-all ${classNameParagraph}`}>
-        {text}
+      <span className={`break-words ${classNameParagraph}`}>
+        {elements}
       </span>
     </>
   );

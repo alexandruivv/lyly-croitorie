@@ -203,57 +203,58 @@ const Programari = () => {
           <div className="w-fit mx-auto">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-3 p-2 lg:p-6 max-lg:gap-y-3">
               <ImageText
-                classNameImg="w-10"
+                classNameImg="w-8"
                 classNameParagraph="text-xs lg:text-lg"
-                text="0742 153 656"
+                elements="0742 153 656"
                 img={phoneImg}
                 href="tel:0742153656"
               />
               <ImageText
-                classNameImg="w-10"
+                classNameImg="w-8"
                 classNameParagraph="text-xs lg:text-lg"
-                text="contact@lylycroitorie.ro"
+                elements="contact@lylydesign.ro"
                 img={mailImg}
                 href="mailto:contact@lylycroitorie.ro"
               />
               <ImageText
-                classNameImg="w-10"
+                classNameImg="w-8"
                 classNameParagraph="text-xs lg:text-lg"
-                text="Lu-Du 7:00-18:00"
+                elements="Lu-Du 7:00-18:00"
                 img={clockImg}
               />
               <ImageText
-                classNameImg="w-10"
+                classNameImg="w-8"
                 classNameParagraph="text-xs lg:text-lg"
-                text="facebook.com/lylycroitorie"
+                elements="/lylydesign"
                 img={fbImg}
                 href="https://facebook.com/lylycroitorie"
               />
             </div>
+
           </div>
-          <div className="flex flex-col gap-2 items-center mx-auto w-full">
+          <div className="flex flex-col gap-2 lg:items-center lg:mx-auto w-full">
             <ImageText
               classNameImg="w-10 lg:w-12"
               classNameParagraph="text-xs lg:text-lg"
-              text="Efectuăm lucrări în Piatra-Neamț și în apropiere"
+              elements="Efectuăm lucrări în Piatra-Neamț și în apropiere"
               img={locationIcon}
             />
             <ImageText
               classNameImg="w-10 lg:w-12"
               classNameParagraph="text-xs lg:text-lg"
-              text="Majoritatea retusurilor sunt gata in 24-72h!"
+              elements="Majoritatea retusurilor sunt gata in 24-72h!"
               img={ideaIcon}
             />
             <ImageText
               classNameImg="w-10 lg:w-12"
               classNameParagraph="text-xs lg:text-lg"
-              text="Ne puteti contacta si pe whatsapp: 0742 153 656"
+              elements="Ne puteti contacta si pe whatsapp: 0742 153 656"
               img={whatsApp}
             />
             <ImageText
               classNameImg="w-10 lg:w-12"
               classNameParagraph="text-xs lg:text-lg"
-              text="Prindeti acum promotia de -10% pentru prima comanda!"
+              elements="Prindeti acum promotia de -10% pentru prima comanda!"
               img={discountIcon}
             />
           </div>
