@@ -130,14 +130,18 @@ const Programari = () => {
     return phonePattern.test(phone);
   };
 
-  const handleCaptchaVerify = async (response: VerifyCaptchaResponse) => {
+  const handleCaptchaVerify = async (
+    responsePromise: Promise<VerifyCaptchaResponse>
+  ) => {
     setShowCaptcha(false);
+    setIsLoading(true);
+
+    const response = await responsePromise;
     if (!response.success || !response.token) {
       toast.error("Eroare. Vă rugăm să reîncercați.");
+      setIsLoading(false);
       return;
     }
-
-    setIsLoading(true);
 
     try {
       const emailSent = await sendEmail(

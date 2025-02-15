@@ -4,7 +4,7 @@ import { verifyCaptcha, VerifyCaptchaResponse } from "@/app/services/apiClient";
 import { environment } from "@/app/environment";
 
 interface Props {
-  onVerify: (response: VerifyCaptchaResponse) => void;
+  onVerify: (response: Promise<VerifyCaptchaResponse>) => void;
   onClose: () => void;
 }
 
@@ -27,9 +27,9 @@ const CaptchaWrapper = ({ onVerify, onClose }: Props) => {
     };
   }, [onClose]);
 
-  const handleVerify = async (token: string | null) => {
+  const handleVerify = (token: string | null) => {
     if (token) {
-      const result = await verifyCaptcha(token);
+      const result = verifyCaptcha(token);
       onVerify(result);
     }
   };
