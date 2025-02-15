@@ -47,6 +47,7 @@ const DespreCeEVorba = () => {
       className="relative w-full bg-cover bg-center bg-no-repeat bg-[image:var(--mobile-image-url)] md:bg-[image:var(--image-url)]"
     >
       <div className="absolute inset-0 bg-white bg-opacity-80"></div>
+      <div className="fade-overlay"></div>
 
       <div className="relative h-full flex flex-col justify-evenly p-16 md:p-10 max-md:pb-32 text-black gap-10">
         <h1 className="font-bold text-2xl md:text-5xl text-center max-md:mt-5 md:my-10">

@@ -1,6 +1,6 @@
 "use client";
 
-import {useState} from "react";
+import React, {useState} from "react";
 import Button from "../components/Button";
 import ImageText from "@/app/components/ImageText";
 import discountIcon from "../.././../public/svg/discount.svg";
@@ -191,6 +191,7 @@ const Programari = () => {
       className="relative w-full min-h-screen overflow-y-auto bg-cover bg-center bg-no-repeat bg-[image:var(--mobile-image-url)] lg:bg-[image:var(--image-url)]"
     >
       <div className="absolute inset-0 bg-white bg-opacity-80"></div>
+      <div className="fade-overlay"></div>
 
       <div className="relative h-full flex flex-col justify-between pt-24 pb-32 md:pt-28 md:pb-8 text-black p-2">
         <h1 className="font-bold text-2xl md:text-5xl text-center">

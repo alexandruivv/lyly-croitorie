@@ -30,8 +30,9 @@ const Servicii = () => {
       className="relative w-full bg-cover bg-center bg-no-repeat bg-[image:var(--mobile-image-url)] lg:bg-[image:var(--image-url)]"
     >
       <div className="absolute inset-0 bg-white bg-opacity-80"></div>
-
-      <div className="relative h-full flex flex-col justify-between py-24 px-5 lg:py-32 max-md:pb-32 text-black w-full gap-10">
+      <div className="fade-overlay"></div>
+      <div
+        className="relative h-full flex flex-col justify-between py-24 px-5 lg:py-32 max-md:pb-32 text-black w-full gap-10">
         <h1 className="font-bold text-2xl md:text-5xl text-center max-lg:mt-5 lg:my-10">
           Despre noi
         </h1>
