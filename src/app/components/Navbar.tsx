@@ -24,6 +24,9 @@ const Navbar = () => {
         case "Despre noi":
           sectionName = "despre-noi";
           break;
+        case "Creații":
+          sectionName = "lucrarile-noastre";
+          break;
         case "Servicii":
           sectionName = "servicii";
           break;
@@ -57,7 +60,7 @@ const Navbar = () => {
           className="lg:hidden hover:cursor-pointer z-40 h-16 md:h-24"
           onClick={() => setShowSidebar((prev) => !prev)}
         >
-          <Image src={drawer} alt="drawer" className="h-8 md:h-10"></Image>
+          <Image src={drawer} alt="drawer" className="h-8 md:h-10" />
         </button>
         <Link
           href="/"
@@ -69,17 +72,22 @@ const Navbar = () => {
           {getLink("Acasă")}
           {getLink("Cum procedăm?")}
           {getLink("Despre noi")}
+          {getLink("Creații")}
           {getLink("Servicii")}
           {getLink("Întrebări")}
           {getLink("Programări")}
         </ul>
       </nav>
-      {showSidebar && (
-        <Sidebar
-          isOpen={showSidebar}
-          onCloseSidebar={() => setShowSidebar((prev) => !prev)}
-        />
-      )}
+      <div
+        className={`fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-500 ease-in-out ${
+          showSidebar ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+        onClick={() => setShowSidebar(false)}
+      />
+      <Sidebar
+        isOpen={showSidebar}
+        onCloseSidebar={() => setShowSidebar((prev) => !prev)}
+      />
     </>
   );
 };
