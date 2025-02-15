@@ -245,19 +245,19 @@ const Programari = () => {
             <ImageText
               classNameImg="w-10 lg:w-12"
               classNameParagraph="text-xs lg:text-lg"
-              elements="Majoritatea retusurilor sunt gata in 24-72h!"
+              elements="Majoritatea retușurilor sunt gata în 24-72h!"
               img={ideaIcon}
             />
             <ImageText
               classNameImg="w-10 lg:w-12"
               classNameParagraph="text-xs lg:text-lg"
-              elements="Ne puteti contacta si pe whatsapp: 0742 153 656"
+              elements="Ne puteți contacta și pe WhatsApp: 0742 153 656"
               img={whatsApp}
             />
             <ImageText
               classNameImg="w-10 lg:w-12"
               classNameParagraph="text-xs lg:text-lg"
-              elements="Prindeti acum promotia de -10% pentru prima comanda!"
+              elements="Prindeți acum promoția de -10% pentru prima comandă!"
               img={discountIcon}
             />
           </div>

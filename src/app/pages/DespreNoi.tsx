@@ -17,10 +17,10 @@ import "react-multi-carousel/lib/styles.css";
 
 const servicii: ReactNode[] = [
   <p>
-    Echipa noastra este localizata in{" "}
-    <span className="font-semibold text-brownHover">Piatra-Neamt</span> si
-    beneficiaza de o{" "}
-    <span className="font-semibold text-brownHover">experienta</span> in
+    Echipa noastră este localizată în apropierea orașului{" "}
+    <span className="font-semibold text-brownHover">Piatra-Neamț</span> si
+    beneficiază de o{" "}
+    <span className="font-semibold text-brownHover">experiență</span> în
     croitorie de peste{" "}
     <span className="font-semibold text-brownHover">10 ani</span>
   </p>,

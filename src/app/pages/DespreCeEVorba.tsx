@@ -51,7 +51,7 @@ const DespreCeEVorba = () => {
 
       <div className="relative h-full flex flex-col justify-evenly p-16 md:p-10 max-md:pb-32 text-black gap-10">
         <h1 className="font-bold text-2xl md:text-5xl text-center max-md:mt-5 md:my-10">
-          Cum procedam?
+          Cum procedăm?
         </h1>
         <div className="grid md:grid-cols-3 gap-4 md:gap-8">
           {descrieri.map((descriere, index) => (
@@ -68,13 +68,12 @@ const DespreCeEVorba = () => {
           className="mx-auto"
           onClick={() => scrollToSection("programari")}
         />
-        <div className='w-full flex items-center'>
+        <div className="w-full flex items-center">
           <GoArrow
             className="w-20 mx-auto"
             onClick={() => scrollToSection("servicii")}
           />
         </div>
-
       </div>
     </div>
   );

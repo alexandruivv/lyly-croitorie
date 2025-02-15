@@ -75,7 +75,7 @@ const LucrarileNoastre = () => {
       <div
         className="relative h-full flex flex-col justify-between py-24 px-5 lg:py-32 max-md:pb-32 text-black w-full gap-10">
         <h1 className="font-bold text-2xl md:text-5xl text-center max-lg:mt-5 lg:my-10">
-          Creatiile noastre
+          Creațiile noastre
         </h1>
         <Carousel responsive={responsive} >
           <Image src={img15} alt='despre-noi-image-img14' className={imgClass} />
