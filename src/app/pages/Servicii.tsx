@@ -7,6 +7,7 @@ import { scrollToSection } from "@/app/utils/utils";
 import bgMobileImg from "../../../public/images/despre_ce_e_vorba_bg_mobile.webp";
 import bgImg from "../../../public/images/despre_ce_e_vorba_bg.webp";
 import { CustomCSSProperties } from "@/app/types/CustomCSSProperties";
+import React from "react";
 
 const Servicii = () => {
   return (
@@ -18,11 +19,11 @@ const Servicii = () => {
           "--image-url": `url(${bgImg.src})`,
         } as CustomCSSProperties
       }
-      className="relative w-full h-screen bg-cover bg-center bg-no-repeat bg-[image:var(--mobile-image-url)] lg:bg-[image:var(--image-url)]"
+      className="relative w-full bg-cover bg-center bg-no-repeat bg-[image:var(--mobile-image-url)] lg:bg-[image:var(--image-url)]"
     >
       <div className="absolute inset-0 bg-white bg-opacity-80"></div>
 
-      <div className="relative h-full flex flex-col justify-evenly py-16 md:p-10 max-md:pb-32 text-black">
+      <div className="relative h-full flex flex-col justify-evenly py-16 md:p-10 max-md:pb-32 text-black gap-10">
         <h1 className="font-bold text-2xl md:text-5xl text-center max-md:mt-5 md:my-10">
           Servicii
         </h1>
@@ -43,10 +44,12 @@ const Servicii = () => {
           className="mx-auto"
           onClick={() => scrollToSection("programari")}
         />
-        <GoArrow
-          className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-20 md:mb-4"
-          onClick={() => scrollToSection("despre-noi")}
-        />
+        <div className='w-full flex items-center'>
+          <GoArrow
+            className="w-20 mx-auto"
+            onClick={() => scrollToSection("despre-noi")}
+          />
+        </div>
       </div>
     </div>
   );

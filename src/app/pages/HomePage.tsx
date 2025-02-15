@@ -23,11 +23,10 @@ const HomePage = () => {
 
       <div className="absolute left-4 bottom-1/4 md:left-20 text-peach max-w-2xl w-fit font-bold text-shadow">
         <h2 className="text-xl sm:text-2xl md:text-4xl mb-2">
-          Prea ocupat să ajungi la croitor?
+          Croitorie fără drumuri și pierdere de timp – venim noi la tine!
         </h2>
         <h3 className="text-sm sm:text-base md:text-xl">
-          Venim direct la domiciliul tău pentru soluții rapide de croitorie și
-          retuș personalizat!
+          Fie că ai nevoie de ajustări rapide sau de haine create pe măsură, îți oferim servicii de croitorie la domiciliu. Adaptăm, retușăm și creăm haine perfect potrivite pentru tine, fără să te deplasezi!
         </h3>
         <Button
           text="Programează acum!"

@@ -8,6 +8,7 @@ import bgImg from "../../../public/images/despre_ce_e_vorba_bg.webp";
 import bgMobileImg from "../../../public/images/despre_ce_e_vorba_bg_mobile.webp";
 import { scrollToSection } from "@/app/utils/utils";
 import { CustomCSSProperties } from "@/app/types/CustomCSSProperties";
+import React from "react";
 
 const servicii: string[] = [
   "Echipa noastra este localizata in Piatra-Neamt si beneficiaza de o experienta in croitorie de peste 10 ani",
@@ -26,11 +27,11 @@ const Servicii = () => {
           "--image-url": `url(${bgImg.src})`,
         } as CustomCSSProperties
       }
-      className="relative w-full h-screen bg-cover bg-center bg-no-repeat bg-[image:var(--mobile-image-url)] lg:bg-[image:var(--image-url)]"
+      className="relative w-full bg-cover bg-center bg-no-repeat bg-[image:var(--mobile-image-url)] lg:bg-[image:var(--image-url)]"
     >
       <div className="absolute inset-0 bg-white bg-opacity-80"></div>
 
-      <div className="relative h-full flex flex-col justify-between py-24 px-5 lg:py-32 max-md:pb-32 text-black w-full">
+      <div className="relative h-full flex flex-col justify-between py-24 px-5 lg:py-32 max-md:pb-32 text-black w-full gap-10">
         <h1 className="font-bold text-2xl md:text-5xl text-center max-lg:mt-5 lg:my-10">
           Despre noi
         </h1>
@@ -48,13 +49,15 @@ const Servicii = () => {
         </div>
         <Button
           text="Programează acum!"
-          className="mx-auto max-md:mb-8"
+          className="mx-auto"
           onClick={() => scrollToSection("programari")}
         />
-        <GoArrow
-          className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-20 md:mb-4"
-          onClick={() => scrollToSection("programari")}
-        />
+        <div className='w-full flex items-center'>
+          <GoArrow
+            className="w-20 mx-auto"
+            onClick={() => scrollToSection("programari")}
+          />
+        </div>
       </div>
     </div>
   );

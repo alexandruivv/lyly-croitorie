@@ -1,19 +1,24 @@
 "use client";
 
-import { useState } from "react";
+import {useState} from "react";
 import Button from "../components/Button";
 import ImageText from "@/app/components/ImageText";
+import discountIcon from "../.././../public/svg/discount.svg";
+import whatsApp from "../.././../public/svg/whatsApp.svg";
 import clockImg from "../.././../public/svg/clock.svg";
+import ideaIcon from "../.././../public/svg/idea.svg";
 import fbImg from "../.././../public/svg/facebook.svg";
 import mailImg from "../.././../public/svg/mail.svg";
 import phoneImg from "../.././../public/svg/phone.svg";
-import FormField, { FormFieldType } from "@/app/components/FormField";
+import FormField, {FormFieldType} from "@/app/components/FormField";
 import bgMobileImg from "../../../public/images/despre_ce_e_vorba_bg_mobile.webp";
 import bgImg from "../../../public/images/despre_ce_e_vorba_bg.webp";
-import { CustomCSSProperties } from "@/app/types/CustomCSSProperties";
+import {CustomCSSProperties} from "@/app/types/CustomCSSProperties";
 import CaptchaWrapper from "../components/CaptchaWrapper";
-import { toast } from "react-toastify";
-import { VerifyCaptchaResponse, sendEmail } from "../services/apiClient";
+import {toast} from "react-toastify";
+import {sendEmail, VerifyCaptchaResponse} from "../services/apiClient";
+import {scrollToSection} from "@/app/utils/utils";
+import GoArrow, {GoArrowDirection} from "@/app/components/GoArrow";
 
 const Programari = () => {
   const [showCaptcha, setShowCaptcha] = useState(false);
@@ -196,33 +201,54 @@ const Programari = () => {
           <div className="w-fit mx-auto">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-3 p-2 lg:p-6 max-lg:gap-y-3">
               <ImageText
-                classNameImg="max-md:w-4 max-lg:w-6"
+                classNameImg="w-10"
                 classNameParagraph="text-xs lg:text-lg"
                 text="0742 153 656"
                 img={phoneImg}
                 href="tel:0742153656"
               />
               <ImageText
-                classNameImg="max-md:w-4 max-lg:w-6"
+                classNameImg="w-10"
                 classNameParagraph="text-xs lg:text-lg"
                 text="contact@lylycroitorie.ro"
                 img={mailImg}
                 href="mailto:contact@lylycroitorie.ro"
               />
               <ImageText
-                classNameImg="max-md:w-4 max-lg:w-6"
+                classNameImg="w-10"
                 classNameParagraph="text-xs lg:text-lg"
                 text="Lu-Du 7:00-18:00"
                 img={clockImg}
               />
               <ImageText
-                classNameImg="max-md:w-4 max-lg:w-6"
+                classNameImg="w-10"
                 classNameParagraph="text-xs lg:text-lg"
                 text="facebook.com/lylycroitorie"
                 img={fbImg}
                 href="https://facebook.com/lylycroitorie"
               />
             </div>
+
+          </div>
+          <div className='flex flex-col gap-2 items-center mx-auto w-full'>
+            <ImageText
+              classNameImg="w-10 lg:w-12"
+              classNameParagraph="text-xs lg:text-lg"
+              text="Majoritatea retusurilor sunt gata in 24-72h!"
+              img={ideaIcon}
+            />
+            <ImageText
+              classNameImg="w-10 lg:w-12"
+              classNameParagraph="text-xs lg:text-lg"
+              text="Ne puteti contacta si pe whatsapp: 0742 153 656"
+              img={whatsApp}
+            />
+            <ImageText
+              classNameImg="w-10 lg:w-12"
+              classNameParagraph="text-xs lg:text-lg"
+              text="Prindeti acum promotia de -10% pentru prima comanda!"
+              img={discountIcon}
+            />
           </div>
 
           <form
@@ -272,6 +298,11 @@ const Programari = () => {
               loading={isLoading}
             />
           </form>
+          <GoArrow
+            className="w-20 mx-auto"
+            direction={GoArrowDirection.UP}
+            onClick={() => scrollToSection("acasa")}
+          />
         </div>
 
         {showCaptcha && (

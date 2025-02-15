@@ -22,17 +22,6 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
 }
 
-.main-container {
-  overflow: scroll;
-  overflow-x: hidden;
-  height: 100vh;
-  scroll-snap-type: y mandatory;
-}
-
-section {
-  scroll-snap-align: start;
-}
-
 @media screen and (max-height: 900px) {
   .form-inputs-container {
     flex-direction: row !important;

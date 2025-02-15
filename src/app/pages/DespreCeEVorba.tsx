@@ -5,7 +5,7 @@ import CumProcedamDescriere, {
   Descriere,
 } from "@/app/components/CumProcedamDescriere";
 import truckIcon from "../../../public/svg/truck.svg";
-import boxIcon from "../../../public/svg/truck.svg";
+import boxIcon from "../../../public/svg/box.svg";
 
 import keyboardReturnIcon from "../../../public/svg/keyboard_return.svg";
 import Button from "@/app/components/Button";
@@ -44,11 +44,11 @@ const DespreCeEVorba = () => {
           "--image-url": `url(${bgImg.src})`,
         } as CustomCSSProperties
       }
-      className="relative w-full h-screen bg-cover bg-center bg-no-repeat bg-[image:var(--mobile-image-url)] md:bg-[image:var(--image-url)]"
+      className="relative w-full bg-cover bg-center bg-no-repeat bg-[image:var(--mobile-image-url)] md:bg-[image:var(--image-url)]"
     >
       <div className="absolute inset-0 bg-white bg-opacity-80"></div>
 
-      <div className="relative h-full flex flex-col justify-evenly p-16 md:p-10 max-md:pb-32 text-black">
+      <div className="relative h-full flex flex-col justify-evenly p-16 md:p-10 max-md:pb-32 text-black gap-10">
         <h1 className="font-bold text-2xl md:text-5xl text-center max-md:mt-5 md:my-10">
           Cum procedam?
         </h1>
@@ -67,10 +67,13 @@ const DespreCeEVorba = () => {
           className="mx-auto"
           onClick={() => scrollToSection("programari")}
         />
-        <GoArrow
-          className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-20 md:mb-4"
-          onClick={() => scrollToSection("servicii")}
-        />
+        <div className='w-full flex items-center'>
+          <GoArrow
+            className="w-20 mx-auto"
+            onClick={() => scrollToSection("servicii")}
+          />
+        </div>
+
       </div>
     </div>
   );
