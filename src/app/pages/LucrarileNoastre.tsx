@@ -116,7 +116,7 @@ const LucrarileNoastre = () => {
         <div className='w-full flex items-center'>
           <GoArrow
             className="w-20 mx-auto"
-            onClick={() => scrollToSection("programari")}
+            onClick={() => scrollToSection("intrebari")}
           />
         </div>
       </div>

@@ -138,7 +138,7 @@ const Servicii = () => {
         <div className="w-full flex items-center">
           <GoArrow
             className="w-20 mx-auto"
-            onClick={() => scrollToSection("intrebari")}
+            onClick={() => scrollToSection("lucrarile-noastre")}
           />
         </div>
       </div>
