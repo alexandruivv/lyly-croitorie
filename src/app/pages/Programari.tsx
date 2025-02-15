@@ -71,6 +71,10 @@ const Programari = () => {
       newErrors.email = "Email-ul este obligatoriu.";
       valid = false;
     }
+    if (!isEmailValid(formData.email.trim())) {
+      newErrors.email = "Email-ul este invalid.";
+      valid = false;
+    }
     if (!formData.mesaj.trim()) {
       newErrors.mesaj = "Mesajul este obligatoriu.";
       valid = false;
@@ -84,6 +88,11 @@ const Programari = () => {
     }
 
     setShowCaptcha(true);
+  };
+
+  const isEmailValid = (email: string) => {
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    return emailPattern.test(email);
   };
 
   const handleCaptchaVerify = async (response: VerifyCaptchaResponse) => {
@@ -143,7 +152,7 @@ const Programari = () => {
     >
       <div className="absolute inset-0 bg-white bg-opacity-80"></div>
 
-      <div className="relative h-full flex flex-col justify-between pt-24 pb-32 md:pt-28 md:pb-8 text-black">
+      <div className="relative h-full flex flex-col justify-between pt-24 pb-32 md:pt-28 md:pb-8 text-black p-2">
         <h1 className="font-bold text-2xl md:text-5xl text-center">
           Programări
         </h1>
@@ -182,7 +191,7 @@ const Programari = () => {
           </div>
 
           <form
-            className="flex flex-col gap-1.5 lg:px-8"
+            className="flex flex-col gap-1.5 lg:px-8 lg:w-1/2 lg:mx-auto"
             onSubmit={handleSubmit}
           >
             <FormField

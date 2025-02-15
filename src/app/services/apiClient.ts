@@ -1,11 +1,12 @@
 import axios from "axios";
+import {environment} from "@/app/environment";
 
 export interface VerifyCaptchaResponse {
   success: boolean;
   token?: string;
 }
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_API_URL;
+const baseUrl = environment.baseApiUrl;
 
 export const verifyCaptcha = async (
   token: string

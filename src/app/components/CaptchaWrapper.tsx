@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { verifyCaptcha, VerifyCaptchaResponse } from "@/app/services/apiClient";
+import {environment} from "@/app/environment";
 
 interface Props {
   onVerify: (response: VerifyCaptchaResponse) => void;
@@ -74,7 +75,7 @@ const CaptchaWrapper = ({ onVerify, onClose }: Props) => {
         </div>
 
         <ReCAPTCHA
-          sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
+          sitekey={environment.siteKey || ""}
           onChange={handleVerify}
         />
       </div>
