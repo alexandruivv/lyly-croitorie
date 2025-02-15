@@ -66,12 +66,14 @@ const Programari = () => {
     if (!formData.telefon.trim()) {
       newErrors.telefon = "Telefonul este obligatoriu.";
       valid = false;
+    } else if (!isPhoneValid(formData.telefon.trim())) {
+      newErrors.telefon = "Telefonul este incorect.";
+      valid = false;
     }
     if (!formData.email.trim()) {
       newErrors.email = "Email-ul este obligatoriu.";
       valid = false;
-    }
-    if (!isEmailValid(formData.email.trim())) {
+    } else if (!isEmailValid(formData.email.trim())) {
       newErrors.email = "Email-ul este invalid.";
       valid = false;
     }
@@ -94,6 +96,12 @@ const Programari = () => {
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     return emailPattern.test(email);
   };
+
+  const isPhoneValid = (phone: string) => {
+    const phonePattern = /^\+?\d{1,4}[\s.-]?\(?\d{1,4}\)?[\s.-]?\d{1,4}[\s.-]?\d{1,9}$/;
+    return phonePattern.test(phone);
+  };
+
 
   const handleCaptchaVerify = async (response: VerifyCaptchaResponse) => {
     setShowCaptcha(false);
