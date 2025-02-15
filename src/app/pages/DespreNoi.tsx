@@ -10,7 +10,7 @@ import { scrollToSection } from "@/app/utils/utils";
 import { CustomCSSProperties } from "@/app/types/CustomCSSProperties";
 
 const servicii: string[] = [
-  "Experienta in croitorie de peste 10 ani",
+  "Echipa noastra este localizata in Piatra-Neamt si beneficiaza de o experienta in croitorie de peste 10 ani",
   "Măiestrim tehnici de cusut, folosind diverse tipuri de mașini, pentru a realiza modele unice, inclusiv din materiale dificile și pretențioase.",
   "Experiența acumulată de-a lungul anilor include interacțiunea cu clienții, înțelegerea nevoilor acestora și furnizarea de soluții personalizate.",
   "Înțelegem că fiecare proiect are provocările sale unice, motiv pentru care ne adaptăm cu ușurință cerințelor în schimbare.",
@@ -30,11 +30,11 @@ const Servicii = () => {
     >
       <div className="absolute inset-0 bg-white bg-opacity-80"></div>
 
-      <div className="relative h-full flex flex-col justify-between py-24 px-5 lg:py-32 max-md:pb-32 text-black">
+      <div className="relative h-full flex flex-col justify-between py-24 px-5 lg:py-32 max-md:pb-32 text-black w-full">
         <h1 className="font-bold text-2xl md:text-5xl text-center max-lg:mt-5 lg:my-10">
           Despre noi
         </h1>
-        <div className="flex flex-col lg:flex-row lg:flex-wrap w-full gap-5 md:gap-y-20">
+        <div className="flex flex-col lg:flex-wrap w-full gap-5 md:gap-y-20 lg:mx-auto items-center">
           {servicii.map((serviciu, index) => (
             <ImageText
               key={index}
@@ -42,7 +42,7 @@ const Servicii = () => {
               text={serviciu}
               classNameContainer="flex flex-row gap-4 items-center w-full lg:w-[49%]"
               classNameImg="md:w-14 w-10"
-              classNameParagraph="text-sm lg:text-2xl font-semibold"
+              classNameParagraph="text-sm lg:text-2xl font-light"
             />
           ))}
         </div>
