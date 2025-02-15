@@ -1,6 +1,6 @@
 "use client";
 
-import React, {useState} from "react";
+import { useState } from "react";
 import Button from "../components/Button";
 import ImageText from "@/app/components/ImageText";
 import discountIcon from "../.././../public/svg/discount.svg";
@@ -10,15 +10,16 @@ import ideaIcon from "../.././../public/svg/idea.svg";
 import fbImg from "../.././../public/svg/facebook.svg";
 import mailImg from "../.././../public/svg/mail.svg";
 import phoneImg from "../.././../public/svg/phone.svg";
-import FormField, {FormFieldType} from "@/app/components/FormField";
+import locationIcon from "../.././../public/svg/location.svg";
+import FormField, { FormFieldType } from "@/app/components/FormField";
 import bgMobileImg from "../../../public/images/despre_ce_e_vorba_bg_mobile.webp";
 import bgImg from "../../../public/images/despre_ce_e_vorba_bg.webp";
-import {CustomCSSProperties} from "@/app/types/CustomCSSProperties";
+import { CustomCSSProperties } from "@/app/types/CustomCSSProperties";
 import CaptchaWrapper from "../components/CaptchaWrapper";
-import {toast} from "react-toastify";
-import {sendEmail, VerifyCaptchaResponse} from "../services/apiClient";
-import {scrollToSection} from "@/app/utils/utils";
-import GoArrow, {GoArrowDirection} from "@/app/components/GoArrow";
+import { toast } from "react-toastify";
+import { sendEmail, VerifyCaptchaResponse } from "../services/apiClient";
+import { scrollToSection } from "@/app/utils/utils";
+import GoArrow, { GoArrowDirection } from "@/app/components/GoArrow";
 
 const Programari = () => {
   const [showCaptcha, setShowCaptcha] = useState(false);
@@ -229,9 +230,14 @@ const Programari = () => {
                 href="https://facebook.com/lylycroitorie"
               />
             </div>
-
           </div>
-          <div className='flex flex-col gap-2 items-center mx-auto w-full'>
+          <div className="flex flex-col gap-2 items-center mx-auto w-full">
+            <ImageText
+              classNameImg="w-10 lg:w-12"
+              classNameParagraph="text-xs lg:text-lg"
+              text="Efectuăm lucrări în Piatra-Neamț și în apropiere"
+              img={locationIcon}
+            />
             <ImageText
               classNameImg="w-10 lg:w-12"
               classNameParagraph="text-xs lg:text-lg"
