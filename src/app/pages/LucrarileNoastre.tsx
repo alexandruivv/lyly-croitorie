@@ -14,7 +14,6 @@ import img1 from '../../../public/images/poze-lucrari/1.jpeg';
 import img2 from '../../../public/images/poze-lucrari/2.jpeg';
 import img3 from '../../../public/images/poze-lucrari/3.jpeg';
 import img4 from '../../../public/images/poze-lucrari/4.jpeg';
-import img5 from '../../../public/images/poze-lucrari/5.jpeg';
 import img6 from '../../../public/images/poze-lucrari/6.jpeg';
 import img7 from '../../../public/images/poze-lucrari/7.jpeg';
 import img8 from '../../../public/images/poze-lucrari/8.jpeg';
@@ -94,7 +93,6 @@ const LucrarileNoastre = () => {
           <Image src={img2} alt='despre-noi-image-img2' className={imgClass}/>
           <Image src={img3} alt='despre-noi-image-img3' className={imgClass}/>
           <Image src={img4} alt='despre-noi-image-img4' className={imgClass}/>
-          <Image src={img5} alt='despre-noi-image-img5' className={imgClass}/>
           <Image src={img6} alt='despre-noi-image-img6' className={imgClass} />
           <Image src={img7} alt='despre-noi-image-img7' className={imgClass} />
           <Image src={img8} alt='despre-noi-image-img8' className={imgClass} />
