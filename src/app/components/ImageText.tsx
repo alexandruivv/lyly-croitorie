@@ -1,4 +1,4 @@
-import React, {ReactNode} from "react";
+import React, { ReactNode } from "react";
 import Image, { StaticImageData } from "next/image";
 
 interface Props {
@@ -23,9 +23,7 @@ const ImageText = ({
   const content = (
     <>
       <Image src={img} alt="check-icon" className={classNameImg} />
-      <span className={`break-words ${classNameParagraph}`}>
-        {elements}
-      </span>
+      <span className={`break-words ${classNameParagraph}`}>{elements}</span>
     </>
   );
 

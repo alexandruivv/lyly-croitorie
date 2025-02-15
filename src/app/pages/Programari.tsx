@@ -4,7 +4,7 @@ import { useState } from "react";
 import Button from "../components/Button";
 import ImageText from "@/app/components/ImageText";
 import discountIcon from "../.././../public/svg/discount.svg";
-import whatsApp from "../.././../public/svg/whatsApp.svg";
+import whatsApp from "../.././../public/svg/whatsapp.svg";
 import clockImg from "../.././../public/svg/clock.svg";
 import ideaIcon from "../.././../public/svg/idea.svg";
 import fbImg from "../.././../public/svg/facebook.svg";
@@ -230,7 +230,6 @@ const Programari = () => {
                 href="https://facebook.com/lylycroitorie"
               />
             </div>
-
           </div>
           <div className="flex flex-col gap-2 lg:items-center lg:mx-auto w-full">
             <ImageText

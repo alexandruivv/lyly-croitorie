@@ -4,6 +4,7 @@ import Servicii from "./pages/Servicii";
 import DespreNoi from "@/app/pages/DespreNoi";
 import Programari from "@/app/pages/Programari";
 import Footer from "@/app/components/Footer";
+import Intrebari from "./pages/Intrebari";
 
 export default function Home() {
   return (
@@ -19,6 +20,9 @@ export default function Home() {
       </section>
       <section>
         <DespreNoi />
+      </section>
+      <section>
+        <Intrebari />
       </section>
       <section>
         <Programari />
