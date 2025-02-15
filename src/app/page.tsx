@@ -5,6 +5,7 @@ import DespreNoi from "@/app/pages/DespreNoi";
 import Programari from "@/app/pages/Programari";
 import Footer from "@/app/components/Footer";
 import Intrebari from "./pages/Intrebari";
+import LucrarileNoastre from "@/app/pages/LucrarileNoastre";
 
 export default function Home() {
   return (
@@ -19,7 +20,10 @@ export default function Home() {
         <Servicii />
       </section>
       <section>
-        <DespreNoi />
+        <DespreNoi/>
+      </section>
+      <section>
+        <LucrarileNoastre />
       </section>
       <section>
         <Intrebari />
