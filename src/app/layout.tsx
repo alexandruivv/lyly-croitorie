@@ -3,6 +3,8 @@ import Navbar from "./components/Navbar";
 import { Poppins } from "next/font/google";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Head from "next/head";
+
 
 const poppins = Poppins({
   subsets: ["latin"],
