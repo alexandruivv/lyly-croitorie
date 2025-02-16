@@ -7,9 +7,12 @@ import drawer from "../../../public/svg/drawer.svg";
 import { scrollToSection } from "@/app/utils/utils";
 import { useState } from "react";
 import Sidebar from "@/app/components/Sidebar";
+import {usePathname, useRouter} from "next/navigation";
 
 const Navbar = () => {
   const [showSidebar, setShowSidebar] = useState(false);
+  const pathName = usePathname();
+  const router = useRouter();
 
   const getLink = (name: string) => {
     const scrollToCorrespondingPage = () => {
@@ -39,8 +42,11 @@ const Navbar = () => {
         default:
           sectionName = "";
       }
-      if (sectionName) {
+      if (pathName === '/' && sectionName) {
         scrollToSection(sectionName);
+      }
+      if (pathName !== '/') {
+        router.push('/');
       }
     };
 

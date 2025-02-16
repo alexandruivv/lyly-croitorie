@@ -7,6 +7,7 @@ import mailIcon from "../../../public/svg/mail.svg";
 import clockIcon from "../../../public/svg/clock.svg";
 import { StaticImageData } from "next/image";
 import { scrollToSection } from "@/app/utils/utils";
+import {useRouter} from "next/navigation";
 
 interface FooterColumn {
   title: string;
@@ -19,63 +20,71 @@ interface FooterColumn {
   }[];
 }
 
-const footerColumns: FooterColumn[] = [
-  {
-    title: "PROGRAMĂRI",
-    links: [
-      {
-        text: "Piatra-Neamt",
-        icon: mapPin,
-        onClick: () => scrollToSection("programari"),
-      },
-      { text: "0742 153 656", href: "tel:0742153656", icon: phoneIcon },
-      {
-        text: "contact@lylydesign.ro",
-        href: "mailto:contact@lylydesign.ro",
-        icon: mailIcon,
-      },
-      {
-        text: "Lu-Du 7:00 - 18:00",
-        icon: clockIcon,
-        onClick: () => scrollToSection("programari"),
-      },
-    ],
-  },
-  {
-    title: "INFORMAȚII",
-    links: [
-      {
-        text: "Despre noi",
-        onClick: () => scrollToSection("despre-noi"),
-      },
-      {
-        text: "Politica de confidențialitate",
-        onClick: () => scrollToSection("acasa"),
-      },
-      {
-        text: "Termeni și condiții",
-        onClick: () => scrollToSection("acasa"),
-      },
-      {
-        text: "Contact",
-        onClick: () => scrollToSection("programari"),
-      },
-    ],
-  },
-  {
-    title: "CLIENȚI",
-    links: [
-      {
-        text: "ONLINE DISPUTE RESOLUTION",
-        href: "https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=RO",
-        blank: true,
-      },
-      { text: "ANPC", href: "https://anpc.ro/", blank: true },
-    ],
-  },
-];
+
 
 const Footer = () => {
+  const router = useRouter();
+
+  const footerColumns: FooterColumn[] = [
+    {
+      title: "PROGRAMĂRI",
+      links: [
+        {
+          text: "Piatra-Neamt",
+          icon: mapPin,
+          onClick: () => scrollToSection("programari"),
+        },
+        { text: "0742 153 656", href: "tel:0742153656", icon: phoneIcon },
+        {
+          text: "contact@lylydesign.ro",
+          href: "mailto:contact@lylydesign.ro",
+          icon: mailIcon,
+        },
+        {
+          text: "Lu-Du 7:00 - 18:00",
+          icon: clockIcon,
+          onClick: () => scrollToSection("programari"),
+        },
+      ],
+    },
+    {
+      title: "INFORMAȚII",
+      links: [
+        {
+          text: "Despre noi",
+          onClick: () => scrollToSection("despre-noi"),
+        },
+        {
+          text: "Politica de confidențialitate",
+          onClick: () => navigate('/politica-de-confidentialitate'),
+        },
+        {
+          text: "Termeni și condiții",
+          onClick: () => navigate('/termeni-si-conditii'),
+        },
+        {
+          text: "Contact",
+          onClick: () => scrollToSection("programari"),
+        },
+      ],
+    },
+    {
+      title: "CLIENȚI",
+      links: [
+        {
+          text: "ONLINE DISPUTE RESOLUTION",
+          href: "https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=RO",
+          blank: true,
+        },
+        { text: "ANPC", href: "https://anpc.ro/", blank: true },
+      ],
+    },
+  ];
+
+  const navigate = (path: string) => {
+    router.push(path);
+  }
+
   return (
     <footer className="bg-secondary43 w-full py-8 text-black">
       <div className="container mx-auto px-4 flex flex-col sm:flex-row gap-8 sm:gap-16 md:gap-32 lg:gap-64">
