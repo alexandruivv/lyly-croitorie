@@ -257,7 +257,7 @@ const Programari = () => {
             <ImageText
               classNameImg="w-10 lg:w-12"
               classNameParagraph="text-xs lg:text-lg"
-              elements="Prindeți acum promoția de -10% pentru prima comandă!"
+              elements="Te așteptăm cu o ofertă specială la prima comandă!"
               img={discountIcon}
             />
           </div>

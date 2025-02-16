@@ -26,7 +26,7 @@ const HomePage = () => {
           Croitorie fără drumuri și pierdere de timp – venim noi la tine!
         </h2>
         <h3 className="text-sm sm:text-base md:text-xl">
-          Fie că ai nevoie de ajustări rapide sau de haine create pe măsură, îți oferim servicii de croitorie la domiciliu. Adaptăm, retușăm și creăm haine perfect potrivite pentru tine, fără să te deplasezi!
+          Serviciul nostru de croitorie mobilă îți aduce confort și eleganță, fără drumuri inutile. Adaptăm, retușăm și creăm haine perfect potrivite pentru tine, fără să te deplasezi!
         </h3>
         <Button
           text="Programează acum!"

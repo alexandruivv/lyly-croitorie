@@ -70,7 +70,7 @@ const Intrebari = () => {
       ),
     },
     {
-      question: "Trebuie să plătesc pentru deplasare?",
+      question: "Există o taxă pentru deplasare?",
       answer: (
         <div>
           <ImageText
@@ -87,7 +87,7 @@ const Intrebari = () => {
         <div>
           <ImageText
             classNameImg="w-6 mb-12"
-            elements="Retușurile simple (scurtare, ajustare talie, înlocuire fermoar) sunt gata în 24-48 de ore, în funcție de volumul comenzilor. Articolele mai complexe pot necesita un timp suplimentar."
+            elements="Retușurile simple (scurtare, ajustare talie, înlocuire fermoar) sunt gata în 24-72 de ore, în funcție de volumul comenzilor. Articolele mai complexe pot necesita un timp suplimentar."
             img={officePinImg}
           />
         </div>
@@ -213,7 +213,7 @@ const Intrebari = () => {
       ),
     },
     {
-      question: "Ce se întâmplă dacă nu sunt mulțumit de retuș?",
+      question: "Dacă sunt necesare ajustări suplimentare, ce soluții oferiți?",
       answer: (
         <div>
           <ImageText
