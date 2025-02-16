@@ -33,6 +33,12 @@ import img22 from '../../../public/images/poze-lucrari/22.jpeg';
 import img23 from '../../../public/images/poze-lucrari/23.jpeg';
 import img24 from '../../../public/images/poze-lucrari/24.jpeg';
 import img25 from '../../../public/images/poze-lucrari/25.jpeg';
+import img26 from '../../../public/images/poze-lucrari/26.jpg';
+import img27 from '../../../public/images/poze-lucrari/27.jpg';
+import img28 from '../../../public/images/poze-lucrari/28.jpg';
+import img29 from '../../../public/images/poze-lucrari/29.jpeg';
+import img30 from '../../../public/images/poze-lucrari/30.jpeg';
+import ReviewsSection from "@/app/components/ReviewsSection";
 
 
 const responsive = {
@@ -77,30 +83,45 @@ const LucrarileNoastre = () => {
         <h1 className="font-bold text-2xl md:text-5xl text-center max-lg:mt-5 lg:my-10">
           Creațiile noastre
         </h1>
-        <Carousel responsive={responsive} >
-          <Image src={img15} alt='despre-noi-image-img14' className={imgClass} />
-          <Image src={img16} alt='despre-noi-image-img14' className={imgClass} />
-          <Image src={img17} alt='despre-noi-image-img14' className={imgClass} />
-          <Image src={img18} alt='despre-noi-image-img14' className={imgClass} />
-          <Image src={img19} alt='despre-noi-image-img14' className={imgClass} />
-          <Image src={img20} alt='despre-noi-image-img14' className={imgClass} />
-          <Image src={img21} alt='despre-noi-image-img14' className={imgClass} />
-          <Image src={img22} alt='despre-noi-image-img14' className={imgClass} />
-          <Image src={img23} alt='despre-noi-image-img14' className={imgClass} />
-          <Image src={img24} alt='despre-noi-image-img14' className={imgClass} />
-          <Image src={img25} alt='despre-noi-image-img14' className={imgClass} />
+        <p className="font-light text-medium md:text-xl text-center max-lg:mt-5 lg:my-10">
+          Descoperă lucrările noastre realizate cu atenție la detalii și pasiune pentru croitorie. Fie că este vorba
+          de <span className='text-brownHover font-bold'>retușuri impecabile</span>, <span
+          className='text-brownHover font-bold'>haine personalizate</span> sau modele unice inspirate de <span
+          className='text-brownHover font-bold'>dorințele
+          clienților</span>, fiecare piesă reflectă <span
+          className='text-brownHover font-bold'>profesionalismul</span> și
+          <span className='text-brownHover font-bold'>creativitatea noastră</span>. Alege calitatea și stilul perfect
+          adaptat nevoilor tale! ✂️👗✨
+        </p>
+        <Carousel responsive={responsive}>
+          <Image src={img15} alt='despre-noi-image-img14' className={imgClass}/>
+          <Image src={img16} alt='despre-noi-image-img14' className={imgClass}/>
+          <Image src={img17} alt='despre-noi-image-img14' className={imgClass}/>
+          <Image src={img18} alt='despre-noi-image-img14' className={imgClass}/>
+          <Image src={img19} alt='despre-noi-image-img14' className={imgClass}/>
+          <Image src={img26} alt='despre-noi-image-img14' className={imgClass}/>
+          <Image src={img27} alt='despre-noi-image-img14' className={imgClass}/>
+          <Image src={img28} alt='despre-noi-image-img14' className={imgClass}/>
+          <Image src={img29} alt='despre-noi-image-img14' className={imgClass}/>
+          <Image src={img30} alt='despre-noi-image-img14' className={imgClass}/>
+          <Image src={img20} alt='despre-noi-image-img14' className={imgClass}/>
+          <Image src={img21} alt='despre-noi-image-img14' className={imgClass}/>
+          <Image src={img22} alt='despre-noi-image-img14' className={imgClass}/>
+          <Image src={img23} alt='despre-noi-image-img14' className={imgClass}/>
+          <Image src={img24} alt='despre-noi-image-img14' className={imgClass}/>
+          <Image src={img25} alt='despre-noi-image-img14' className={imgClass}/>
           <Image src={img1} alt='despre-noi-image-img1' className={imgClass}/>
           <Image src={img2} alt='despre-noi-image-img2' className={imgClass}/>
           <Image src={img3} alt='despre-noi-image-img3' className={imgClass}/>
           <Image src={img4} alt='despre-noi-image-img4' className={imgClass}/>
-          <Image src={img6} alt='despre-noi-image-img6' className={imgClass} />
-          <Image src={img7} alt='despre-noi-image-img7' className={imgClass} />
-          <Image src={img8} alt='despre-noi-image-img8' className={imgClass} />
-          <Image src={img9} alt='despre-noi-image-img9' className={imgClass} />
-          <Image src={img10} alt='despre-noi-image-img10' className={imgClass} />
-          <Image src={img11} alt='despre-noi-image-img11' className={imgClass} />
-          <Image src={img12} alt='despre-noi-image-img12' className={imgClass} />
-          <Image src={img13} alt='despre-noi-image-img13' className={imgClass} />
+          <Image src={img6} alt='despre-noi-image-img6' className={imgClass}/>
+          <Image src={img7} alt='despre-noi-image-img7' className={imgClass}/>
+          <Image src={img8} alt='despre-noi-image-img8' className={imgClass}/>
+          <Image src={img9} alt='despre-noi-image-img9' className={imgClass}/>
+          <Image src={img10} alt='despre-noi-image-img10' className={imgClass}/>
+          <Image src={img11} alt='despre-noi-image-img11' className={imgClass}/>
+          <Image src={img12} alt='despre-noi-image-img12' className={imgClass}/>
+          <Image src={img13} alt='despre-noi-image-img13' className={imgClass}/>
 
         </Carousel>
 
@@ -112,7 +133,7 @@ const LucrarileNoastre = () => {
         <div className='w-full flex items-center'>
           <GoArrow
             className="w-20 mx-auto"
-            onClick={() => scrollToSection("intrebari")}
+            onClick={() => scrollToSection("recenzii")}
           />
         </div>
       </div>
