@@ -272,16 +272,16 @@ const Intrebari = () => {
           <ImageText
             classNameImg="w-6 mb-8"
             elements={
-              <h1 className="text-2xl font-bold mb-8">
+              <h1 className="text-2xl font-bold mb-8 text-center">
                 Nu ai găsit răspunsul dorit?
               </h1>
             }
             img={officePinImg}
           />
           <ImageText
-            classNameImg="w-6"
+            classNameImg="w-6 mb-2"
             elements={
-              <p>
+              <p className="text-center">
                 Sună-ne la
                 <a
                   className="font-bold text-secondary ml-2 cursor-pointer hover:text-brownHover transition duration-300 mr-2"
@@ -317,7 +317,7 @@ const Intrebari = () => {
         <div className="w-full flex items-center">
           <GoArrow
             className="w-20 mx-auto"
-            onClick={() => scrollToSection("programari")}
+            onClick={() => scrollToSection("preturi")}
           />
         </div>
       </div>

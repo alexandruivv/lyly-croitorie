@@ -7,38 +7,42 @@ import Footer from "@/app/components/Footer";
 import Intrebari from "./pages/Intrebari";
 import LucrarileNoastre from "@/app/pages/LucrarileNoastre";
 import Recenzii from "@/app/components/Recenzii";
+import Preturi from "./pages/Preturi";
 
-const sectionClassName= 'lg:min-h-[75vh]';
+const sectionClassName = "lg:min-h-[75vh]";
 
 export default function Home() {
   return (
     <>
       <section className={sectionClassName}>
-        <HomePage/>
+        <HomePage />
       </section>
       <section className={sectionClassName}>
-        <DespreCeEVorba/>
+        <DespreCeEVorba />
       </section>
       <section className={sectionClassName}>
-        <Servicii/>
+        <Servicii />
       </section>
       <section className={sectionClassName}>
-        <DespreNoi/>
+        <DespreNoi />
       </section>
       <section className={sectionClassName}>
-        <LucrarileNoastre/>
+        <LucrarileNoastre />
       </section>
       <section className={sectionClassName}>
-        <Recenzii/>
+        <Recenzii />
       </section>
       <section className={sectionClassName}>
-        <Intrebari/>
+        <Intrebari />
       </section>
       <section className={sectionClassName}>
-        <Programari/>
+        <Preturi />
+      </section>
+      <section className={sectionClassName}>
+        <Programari />
       </section>
       <section>
-        <Footer/>
+        <Footer />
       </section>
     </>
   );

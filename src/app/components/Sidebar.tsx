@@ -32,6 +32,9 @@ const Sidebar = ({ isOpen, onCloseSidebar }: Props) => {
         case "Întrebări":
           sectionName = "intrebari";
           break;
+        case "Prețuri":
+          sectionName = "preturi";
+          break;
         case "Programări":
           sectionName = "programari";
           break;
@@ -69,6 +72,7 @@ const Sidebar = ({ isOpen, onCloseSidebar }: Props) => {
             {getLink("Creații")}
             {getLink("Servicii")}
             {getLink("Întrebări")}
+            {getLink("Prețuri")}
             {getLink("Programări")}
           </ul>
         </div>

@@ -7,7 +7,7 @@ import drawer from "../../../public/svg/drawer.svg";
 import { scrollToSection } from "@/app/utils/utils";
 import { useState } from "react";
 import Sidebar from "@/app/components/Sidebar";
-import {usePathname, useRouter} from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 const Navbar = () => {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -36,17 +36,20 @@ const Navbar = () => {
         case "Întrebări":
           sectionName = "intrebari";
           break;
+        case "Prețuri":
+          sectionName = "preturi";
+          break;
         case "Programări":
           sectionName = "programari";
           break;
         default:
           sectionName = "";
       }
-      if (pathName === '/' && sectionName) {
+      if (pathName === "/" && sectionName) {
         scrollToSection(sectionName);
       }
-      if (pathName !== '/') {
-        router.push('/');
+      if (pathName !== "/") {
+        router.push("/");
       }
     };
 
@@ -81,6 +84,7 @@ const Navbar = () => {
           {getLink("Creații")}
           {getLink("Servicii")}
           {getLink("Întrebări")}
+          {getLink("Prețuri")}
           {getLink("Programări")}
         </ul>
       </nav>

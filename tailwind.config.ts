@@ -13,6 +13,7 @@ export default {
         brownHover: "#844008",
         secondary: "#97D0FF",
         secondary43: "rgba(151, 208, 255, 0.43)",
+        secondary60: "rgba(151, 208, 255, 0.60)",
       },
     },
   },
