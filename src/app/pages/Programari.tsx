@@ -230,7 +230,7 @@ const Programari = () => {
               <ImageText
                 classNameImg="w-8"
                 classNameParagraph="text-xs lg:text-lg"
-                elements="leyladesign"
+                elements="Lyly Design"
                 img={fbImg}
                 href="https://facebook.com/leyladesign"
               />
