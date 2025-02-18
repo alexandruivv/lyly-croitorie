@@ -8,6 +8,7 @@ import whatsApp from "../.././../public/svg/whatsapp.svg";
 import clockImg from "../.././../public/svg/clock.svg";
 import ideaIcon from "../.././../public/svg/idea.svg";
 import fbImg from "../.././../public/svg/facebook.svg";
+import messImg from "../.././../public/svg/messenger.svg";
 import mailImg from "../.././../public/svg/mail.svg";
 import phoneImg from "../.././../public/svg/phone.svg";
 import locationIcon from "../.././../public/svg/location.svg";
@@ -200,7 +201,7 @@ const Programari = () => {
 
       <div className="relative h-full flex flex-col justify-between pt-24 pb-32 md:pt-28 md:pb-8 text-black p-2">
         <h1 className="font-bold text-2xl md:text-5xl text-center">
-          Programări
+          Cere o ofertă
         </h1>
 
         <div className="flex-1 flex flex-col justify-center gap-4 mt-2">
@@ -229,13 +230,31 @@ const Programari = () => {
               <ImageText
                 classNameImg="w-8"
                 classNameParagraph="text-xs lg:text-lg"
-                elements="/lylydesign"
+                elements="leyladesign"
                 img={fbImg}
-                href="https://facebook.com/lylycroitorie"
+                href="https://facebook.com/leyladesign"
               />
             </div>
           </div>
           <div className="flex flex-col gap-2 lg:items-center lg:mx-auto w-full">
+            <div className='flex flex-row gap-2 justify-center'>
+              <ImageText
+                className='bg-purple-400 rounded-xl border-black border-2'
+                classNameImg="w-8"
+                classNameParagraph="text-xs lg:text-lg"
+                elements="Messenger"
+                img={messImg}
+                href="https://m.me/leyladesign?text=Buna, doresc o oferta!"
+              />
+              <ImageText
+                className='bg-green-700 rounded-xl border-black border-2'
+                classNameImg="w-8"
+                classNameParagraph="text-xs lg:text-lg"
+                elements="WhatsApp"
+                img={whatsApp}
+                href='https://wa.me/0742153656'
+              />
+            </div>
             <ImageText
               classNameImg="w-10 lg:w-12"
               classNameParagraph="text-xs lg:text-lg"
@@ -247,12 +266,6 @@ const Programari = () => {
               classNameParagraph="text-xs lg:text-lg"
               elements="Majoritatea retușurilor sunt gata în 24-72h!"
               img={ideaIcon}
-            />
-            <ImageText
-              classNameImg="w-10 lg:w-12"
-              classNameParagraph="text-xs lg:text-lg"
-              elements="Ne puteți contacta și pe WhatsApp: 0742 153 656"
-              img={whatsApp}
             />
             <ImageText
               classNameImg="w-10 lg:w-12"
@@ -303,7 +316,7 @@ const Programari = () => {
               error={errors.mesaj}
             />
             <Button
-              text="Programează acum!"
+              text="Trimite formularul"
               className="mt-3 max-md:mt-8 mx-auto"
               disabled={isLoading}
               loading={isLoading}

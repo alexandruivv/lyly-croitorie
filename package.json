@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "predeploy": "npm run build && type nul > out/.nojekyll && copy sitemap.xml out && copy google3bd326384db53d4f.html out && copy google33e5bea4d81c9da1.html out",
+    "predeploy": "npm run build && touch out/.nojekyll && cp sitemap.xml out && cp google3bd326384db53d4f.html out && cp google33e5bea4d81c9da1.html out",
     "deploy": "gh-pages -d out -t",
     "dev": "next dev",
     "build": "next build",

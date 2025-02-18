@@ -131,7 +131,7 @@ const Servicii = () => {
           ))}
         </div>
         <Button
-          text="Programează acum!"
+          text="Cere o ofertă!"
           className="mx-auto"
           onClick={() => scrollToSection("programari")}
         />

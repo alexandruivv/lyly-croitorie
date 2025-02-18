@@ -29,7 +29,7 @@ const HomePage = () => {
           Serviciul nostru de croitorie mobilă îți aduce confort și eleganță, fără drumuri inutile. Adaptăm, retușăm și creăm haine perfect potrivite pentru tine, fără să te deplasezi!
         </h3>
         <Button
-          text="Programează acum!"
+          text="Cere o ofertă!"
           className="mt-6"
           onClick={() => scrollToSection("programari")}
         />
