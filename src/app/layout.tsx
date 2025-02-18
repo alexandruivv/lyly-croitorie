@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Lyly - Croitorie Mobila La Comanda!',
   description:
     'lylydesign.ro: Croitorie mobilă la comandă. Retușuri, ajustări și creații vestimentare personalizate, direct la tine acasă. Calitate și eleganță la fiecare cusătură!',
-  keywords: 'croitorie mobilă, Lyly Design, retușuri haine, ajustări vestimentare, croitor la domiciliu, croitorie personalizată, modificări haine, reparații vestimentare, servicii croitorie, croitor profesionist, croitorie la comandă, cusături de calitate, design vestimentar, haine la comandă'
+  keywords: 'croitorie mobilă, croitorie mobila, croitorie piatra neamt, retus, retusuri haine, retusuri piatra neamt, Lyly Design, retușuri haine, ajustări vestimentare, croitor la domiciliu, croitorie personalizata, modificari haine, reparatii vestimentare, servicii croitorie, croitor profesionist, croitorie la comanda, cusaturi de calitate, design vestimentar, haine la comandă'
 };
 
 const poppins = Poppins({
