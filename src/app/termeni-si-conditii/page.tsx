@@ -2,11 +2,12 @@
 
 import React from "react";
 import Link from "next/link";
+import Footer from "@/app/components/Footer";
 
 const TermsAndConditions = () => {
   return (
-    <div className='py-24 lg:h-screen lg:flex lg:items-center'>
-      <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg">
+    <>
+      <div className='p-14 text-black'>
         <h1 className="text-2xl font-bold mb-4">Termeni și Condiții</h1>
         <p className="mb-4">
           Acești termeni și condiții reglementează utilizarea serviciilor noastre și a site-ului web. Prin accesarea și
@@ -52,7 +53,10 @@ const TermsAndConditions = () => {
           📞 Telefon: 0742 153 656
         </p>
       </div>
-    </div>
+      <section>
+        <Footer />
+      </section>
+    </>
 
   );
 };

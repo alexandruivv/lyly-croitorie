@@ -1,9 +1,11 @@
 import React from "react";
+import Footer from "@/app/components/Footer";
 
 const RefundPolicy = () => {
   return (
-    <div className='py-24 lg:h-screen lg:flex lg:items-center'>
-      <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg">
+    <>
+      <div className='p-14 text-black'>
+
         <h1 className="text-2xl font-bold mb-4">Politica de Rambursare</h1>
         <p className="mb-4">
           Această politică de rambursare descrie condițiile și procedurile pentru returnarea plăților efectuate pentru
@@ -45,14 +47,16 @@ const RefundPolicy = () => {
         <h2 className="text-xl font-semibold mt-4">5. Contact</h2>
         <p className="mb-4">
           Pentru orice întrebări sau solicitări privind politica de rambursare, ne puteți contacta la:
-          <br/>
+          <br />
           📧 Email: contact@lylydesign.ro
-          <br/>
+          <br />
           📞 Telefon: 0742 153 656
         </p>
       </div>
-    </div>
-
+      <section>
+        <Footer />
+      </section>
+    </>
   );
 };
 

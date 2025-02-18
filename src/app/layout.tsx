@@ -25,9 +25,9 @@ export default function RootLayout({
   return (
     <html lang="en">
     <body className={`${poppins.className} font-medium`}>
-    <div className="main-container">
+    <div>
       <Navbar/>
-      <main>{children}</main>
+      <main className='mt-16 md:h-24'>{children}</main>
     </div>
     <ToastContainer/>
     </body>

@@ -3,6 +3,8 @@ import Image from "next/image";
 import logo from "../../../public/images/LOGO.png";
 import GoArrow, { GoArrowDirection } from "@/app/components/GoArrow";
 import { scrollToSection } from "@/app/utils/utils";
+import { usePathname, useRouter } from "next/navigation";
+import { router } from "next/client";
 
 interface Props {
   isOpen: boolean;
@@ -10,6 +12,9 @@ interface Props {
 }
 
 const Sidebar = ({ isOpen, onCloseSidebar }: Props) => {
+  const pathName = usePathname();
+  const router = useRouter();
+
   const getLink = (name: string) => {
     const scrollToCorrespondingPage = () => {
       let sectionName = "";
@@ -41,8 +46,12 @@ const Sidebar = ({ isOpen, onCloseSidebar }: Props) => {
         default:
           sectionName = "";
       }
-      if (sectionName) {
+      if (pathName === "/" && sectionName) {
         scrollToSection(sectionName);
+        onCloseSidebar();
+      }
+      if (pathName !== "/") {
+        router.push("/");
         onCloseSidebar();
       }
     };

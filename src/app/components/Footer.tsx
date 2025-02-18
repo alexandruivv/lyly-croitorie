@@ -122,7 +122,7 @@ const Footer = () => {
 
       <div className="w-full border-t border-black/10 mt-8">
         <div className="container mx-auto px-4 pt-4 text-center sm:text-left">
-          <p>©Copyright LYLY CROITORIE © 2024 All Rights Reserved.</p>
+          <p>©Copyright LYLY DESIGN © 2024 All Rights Reserved.</p>
         </div>
       </div>
     </footer>

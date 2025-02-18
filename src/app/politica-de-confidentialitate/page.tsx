@@ -1,11 +1,12 @@
 "use client";
 
 import React from "react";
+import Footer from "@/app/components/Footer";
 
 const PrivacyPolicy = () => {
   return (
-    <div className='py-24 lg:h-screen lg:flex lg:items-center'>
-      <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg">
+    <>
+      <div className="p-14 text-black">
         <h1 className="text-2xl font-bold mb-4">Politica de Confidențialitate</h1>
         <p className="mb-4">
           Această politică de confidențialitate descrie modul în care colectăm, utilizăm și protejăm informațiile dvs.
@@ -52,14 +53,17 @@ const PrivacyPolicy = () => {
         <p className="mb-4">
           Dacă aveți întrebări sau solicitări cu privire la această politică de confidențialitate, ne puteți contacta
           la:
-          <br/>
+          <br />
           📧 Email: contact@lylydesign.ro
-          <br/>
+          <br />
           📞 Telefon: 0742 153 656
         </p>
-      </div>
-    </div>
 
+      </div>
+      <section>
+        <Footer />
+      </section>
+    </>
   );
 };
 
