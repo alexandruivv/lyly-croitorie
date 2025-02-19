@@ -245,6 +245,7 @@ const Programari = () => {
                 elements="Messenger"
                 img={messImg}
                 href="https://m.me/leyladesign?text=Buna, doresc o oferta!"
+                blank
               />
               <ImageText
                 className='bg-green-700 rounded-xl border-black border-2'
@@ -253,6 +254,7 @@ const Programari = () => {
                 elements="WhatsApp"
                 img={whatsApp}
                 href='https://wa.me/+40742153656'
+                blank
               />
             </div>
             <ImageText

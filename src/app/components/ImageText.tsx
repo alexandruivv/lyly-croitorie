@@ -10,6 +10,7 @@ interface Props {
   img: StaticImageData;
   href?: string;
   onClick?: () => void;
+  blank?: boolean;
 }
 
 const ImageText = ({
@@ -20,6 +21,7 @@ const ImageText = ({
   className,
   img,
   href,
+  blank,
   onClick,
 }: Props) => {
   const content = (
@@ -37,7 +39,7 @@ const ImageText = ({
 
   if (href || onClick) {
     return (
-      <a href={href} onClick={onClick} className={containerClass}>
+      <a href={href} target={blank? '_blank' : undefined} onClick={onClick} className={containerClass}>
         {content}
       </a>
     );
