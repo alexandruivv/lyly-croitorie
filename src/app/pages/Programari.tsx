@@ -252,7 +252,7 @@ const Programari = () => {
                 classNameParagraph="text-xs lg:text-lg"
                 elements="WhatsApp"
                 img={whatsApp}
-                href='https://wa.me/0742153656'
+                href='https://wa.me/+40742153656'
               />
             </div>
             <ImageText
