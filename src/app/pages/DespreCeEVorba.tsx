@@ -5,6 +5,7 @@ import CumProcedamDescriere, {
   Descriere,
 } from "@/app/components/CumProcedamDescriere";
 import truckIcon from "../../../public/svg/truck.svg";
+import phoneIcon from "../../../public/svg/phone.svg";
 import boxIcon from "../../../public/svg/box.svg";
 
 import packageReturnIcon from "../../../public/svg/package-return-icon.svg";
@@ -18,19 +19,24 @@ import { CustomCSSProperties } from "@/app/types/CustomCSSProperties";
 const descrieri: Descriere[] = [
   {
     numar: 1,
-    icon: truckIcon,
-    descriere: "Reprezentantul nostru se deplasează la domiciliul tau",
+    icon: phoneIcon,
+    descriere: <span>Consulti <span onClick={() => scrollToSection("preturi")} className='text-secondary font-semibold'>lista de preturi</span> si ne contactezi pentru oferta</span>,
   },
   {
     numar: 2,
-    icon: boxIcon,
-    descriere:
-      "Preluăm articolele pentru retuș sau ideile dv. de comanda cu măsurile corespunzătoare",
+    icon: truckIcon,
+    descriere: <span>Reprezentantul nostru se deplasează la <span className='text-secondary font-semibold'>locatia ta</span></span>,
   },
   {
     numar: 3,
+    icon: boxIcon,
+    descriere:
+      <span>Preluăm articolele pentru <span className='text-secondary font-semibold'>retuș</span> sau <span className='text-secondary font-semibold'>ideile dv. de comanda</span> cu măsurile corespunzătoare</span>,
+  },
+  {
+    numar: 4,
     icon: packageReturnIcon,
-    descriere: "Returnăm ulterior produsele retușate conform dorințelor",
+    descriere: <span><span className='text-secondary font-semibold'>Returnăm ulterior</span> produsele retușate conform dorințelor</span>,
   },
 ];
 
@@ -64,7 +70,7 @@ const DespreCeEVorba = () => {
           ))}
         </div>
         <Button
-          text="Cere o ofertă!"
+          text="Cere ofertă rapidă ➔"
           className="mx-auto"
           onClick={() => scrollToSection("programari")}
         />

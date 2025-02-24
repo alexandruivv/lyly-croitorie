@@ -30,18 +30,18 @@ const Servicii = () => {
         </h1>
         <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-24">
           <ServiciiDescriere
-            title="CROITORIE RETUȘ"
-            firstParagraph="Serviciu de ajustare și reparare a articolelor vestimentare"
-            secondParagraph="Scurtarea sau lungirea hainelor, ajustarea mărimii taliei, repararea cusăturilor, schimbarea fermoarelor sau ajustarea mânecilor."
+            title="✂️ Retușuri Express (24-72h)"
+            firstParagraph={<span>Serviciu de <span className='font-semibold text-secondary'>ajustare</span> și <span className='font-semibold text-secondary'>reparare</span> a articolelor vestimentare</span>}
+            secondParagraph={<span><span className='font-semibold text-secondary'>Scurtarea sau lungirea</span> hainelor, <span className='font-semibold text-secondary'>ajustarea</span> mărimii taliei, <span className='font-semibold text-secondary'>repararea</span> cusăturilor, schimbarea fermoarelor sau ajustarea mânecilor.</span>}
           />
           <ServiciiDescriere
-            title="CROITORIE LA COMANDĂ"
-            firstParagraph="Transformăm dorințele în realitate, fie că este vorba de o poză, o schiță sau o idee"
-            secondParagraph="Consultanță pentru alegerea modelului, tipului de material, croiala și detaliile finale"
+            title="👗 Haine Personalizate de la 0"
+            firstParagraph={<span>Transformăm <span className='font-semibold text-secondary'>dorințele în realitate</span>, fie că este vorba de o poză, o schiță sau o idee</span>}
+            secondParagraph={<span><span className='font-semibold text-secondary'>Consultanță</span> pentru alegerea modelului, tipului de material, croiala și detaliile finale</span>}
           />
         </div>
         <Button
-          text="Cere o ofertă!"
+          text="Cere ofertă rapidă ➔"
           className="mx-auto"
           onClick={() => scrollToSection("programari")}
         />

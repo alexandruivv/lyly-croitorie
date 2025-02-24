@@ -1,10 +1,11 @@
 import Image from "next/image";
 import checkCircle from "../../../public/svg/check-circle.svg";
+import { ReactNode } from "react";
 
 interface Props {
   title: string;
-  firstParagraph: string;
-  secondParagraph: string;
+  firstParagraph: ReactNode;
+  secondParagraph: ReactNode;
 }
 
 const ServiciiDescriere: React.FC<Props> = ({

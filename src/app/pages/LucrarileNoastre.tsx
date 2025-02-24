@@ -85,12 +85,12 @@ const LucrarileNoastre = () => {
         </h1>
         <p className="font-light text-medium md:text-xl text-center max-lg:mt-5 lg:my-10">
           Descoperă lucrările noastre realizate cu atenție la detalii și pasiune pentru croitorie. Fie că este vorba
-          de <span className='text-brownHover font-bold'>retușuri impecabile</span>, <span
-          className='text-brownHover font-bold'>haine personalizate</span> sau modele unice inspirate de <span
-          className='text-brownHover font-bold'>dorințele
+          de <span className='text-secondary font-bold'>retușuri impecabile</span>, <span
+          className='text-secondary font-bold'>haine personalizate</span> sau modele unice inspirate de <span
+          className='text-secondary font-bold'>dorințele
           clienților</span>, fiecare piesă reflectă <span
-          className='text-brownHover font-bold'>profesionalismul</span> și
-          <span className='text-brownHover font-bold'>creativitatea noastră</span>. Alege calitatea și stilul perfect
+          className='text-secondary font-bold'>profesionalismul</span> și
+          <span className='text-secondary font-bold'> creativitatea noastră</span>. Alege calitatea și stilul perfect
           adaptat nevoilor tale! ✂️👗✨
         </p>
         <Carousel responsive={responsive}>
@@ -126,7 +126,7 @@ const LucrarileNoastre = () => {
         </Carousel>
 
         <Button
-          text="Cere o ofertă!"
+          text="Cere ofertă rapidă ➔"
           className="mx-auto"
           onClick={() => scrollToSection("programari")}
         />

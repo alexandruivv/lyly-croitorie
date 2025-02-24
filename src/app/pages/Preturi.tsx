@@ -185,7 +185,7 @@ const Preturi = () => {
           />
         </div>
         <Button
-          text="Cere o ofertă!"
+          text="Cere ofertă rapidă ➔"
           className="mx-auto"
           onClick={() => scrollToSection("programari")}
         />

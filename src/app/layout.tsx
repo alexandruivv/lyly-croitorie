@@ -5,6 +5,7 @@ import {ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import {Metadata} from "next";
 import PixelTrackerProvider from "@/app/PixelTrackerProvider";
+import Banner from "@/app/components/Banner";
 
 export const metadata: Metadata = {
   title: 'Lyly - Croitorie Mobila La Comanda!',
@@ -55,7 +56,11 @@ export default function RootLayout({
     <body className={`${poppins.className} font-medium`}>
     <div>
       <PixelTrackerProvider />
-      <Navbar/>
+      <div className='flex flex-col'>
+        <Banner />
+        <Navbar/>
+      </div>
+
       <main className='mt-16 md:h-24'>{children}</main>
     </div>
     <ToastContainer/>

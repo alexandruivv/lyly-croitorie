@@ -209,7 +209,7 @@ const Programari = () => {
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-3 p-2 lg:p-6 max-lg:gap-y-3">
               <ImageText
                 classNameImg="w-8"
-                classNameParagraph="text-xs lg:text-lg"
+                classNameParagraph="text-xs lg:text-lg text-secondary font-semibold"
                 elements="0742 153 656"
                 img={phoneImg}
                 href="tel:0742153656"

@@ -1,10 +1,10 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import Image, { StaticImageData } from "next/image";
 
 export interface Descriere {
   numar: number;
   icon: StaticImageData;
-  descriere: string;
+  descriere: ReactNode;
 }
 
 const CumProcedamDescriere = ({ numar, icon, descriere }: Descriere) => {

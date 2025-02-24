@@ -64,7 +64,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 bg-peach text-black shadow-md h-16 md:h-24 flex justify-between items-center w-full lg:px-20 z-50 box-border">
+      <nav className="fixed top-10 left-0 bg-peach text-black shadow-md h-16 md:h-24 flex justify-between items-center w-full lg:px-20 z-50 box-border">
         <button
           className="lg:hidden hover:cursor-pointer z-40 h-16 md:h-24"
           onClick={() => setShowSidebar((prev) => !prev)}

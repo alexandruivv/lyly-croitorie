@@ -3,9 +3,10 @@
 import Button from "../components/Button";
 import GoArrow from "../components/GoArrow";
 import { scrollToSection } from "../utils/utils";
-import bgMobileImg from "../../../public/images/home_image_mobile.webp";
-import bgImg from "../../../public/images/home_image_desktop.webp";
+import bgMobileImg from "../../../public/images/Untitled-design-4-2.jpg";
+import bgImg from "../../../public/images/pexels-pavel-danilyuk-6461064-2.webp";
 import { CustomCSSProperties } from "@/app/types/CustomCSSProperties";
+import React from "react";
 
 const HomePage = () => {
   return (
@@ -19,20 +20,28 @@ const HomePage = () => {
       }
       className="relative w-full h-screen bg-cover bg-center bg-no-repeat bg-[image:var(--mobile-image-url)] lg:bg-[image:var(--image-url)]"
     >
-      <div className="absolute inset-0 bg-black opacity-50"></div>
+      <div className="absolute inset-0 bg-black opacity-30"></div>
 
-      <div className="absolute left-4 bottom-1/4 md:left-20 text-peach max-w-2xl w-fit font-bold text-shadow">
+      <div className="absolute left-4 bottom-1/4 md:left-20 text-white max-w-2xl w-fit font-bold text-shadow">
         <h2 className="text-xl sm:text-2xl md:text-4xl mb-2">
-          Croitorie fără drumuri și pierdere de timp – venim noi la tine!
+          Croitorie mobilă premium – venim la tine acasă!
         </h2>
         <h3 className="text-sm sm:text-base md:text-xl">
-          Serviciul nostru de croitorie mobilă îți aduce confort și eleganță, fără drumuri inutile. Adaptăm, retușăm și creăm haine perfect potrivite pentru tine, fără să te deplasezi!
+          Economisește timp și bani cu serviciile noastre rapide și personalizate.
         </h3>
         <Button
-          text="Cere o ofertă!"
+          text="Cere ofertă rapidă ➔"
           className="mt-6"
           onClick={() => scrollToSection("programari")}
         />
+        <h3 className="text-sm sm:text-base md:text-xl mt-4">
+          Sau sună acum: <a
+          className="font-bold text-secondary ml-2 cursor-pointer hover:text-brownHover transition duration-300"
+          href="tel:0742153656"
+        >
+          📞 0742 153 656
+        </a>
+        </h3>
       </div>
 
       <GoArrow

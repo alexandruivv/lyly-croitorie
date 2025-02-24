@@ -18,17 +18,17 @@ import "react-multi-carousel/lib/styles.css";
 const servicii: ReactNode[] = [
   <p>
     Echipa noastră este localizată în apropierea orașului{" "}
-    <span className="font-semibold text-brownHover">Piatra-Neamț</span> si
+    <span className="font-semibold text-secondary">Piatra-Neamț</span> si
     beneficiază de o{" "}
-    <span className="font-semibold text-brownHover">experiență</span> în
+    <span className="font-semibold text-secondary">experiență</span> în
     croitorie de peste{" "}
-    <span className="font-semibold text-brownHover">10 ani</span>
+    <span className="font-semibold text-secondary">10 ani</span>
   </p>,
   <p>
     Măiestrim tehnici de cusut, folosind diverse tipuri de mașini, pentru a
-    realiza <span className="font-semibold text-brownHover">modele unice</span>,
+    realiza <span className="font-semibold text-secondary">modele unice</span>,
     inclusiv din
-    <span className="font-semibold text-brownHover">
+    <span className="font-semibold text-secondary">
       {" "}
       materiale dificile și pretențioase
     </span>
@@ -36,18 +36,18 @@ const servicii: ReactNode[] = [
   </p>,
   <p>
     Experiența acumulată de-a lungul anilor include{" "}
-    <span className="font-semibold text-brownHover">
+    <span className="font-semibold text-secondary">
       interacțiunea cu clienții
     </span>
     ,
-    <span className="font-semibold text-brownHover"> înțelegerea nevoilor</span>{" "}
+    <span className="font-semibold text-secondary"> înțelegerea nevoilor</span>{" "}
     acestora și furnizarea de{" "}
-    <span className="font-semibold text-brownHover">soluții personalizate</span>
+    <span className="font-semibold text-secondary">soluții personalizate</span>
     .
   </p>,
   <p>
     Înțelegem că fiecare proiect are provocările sale unice, motiv pentru care{" "}
-    <span className="font-semibold text-brownHover">ne adaptăm</span> cu
+    <span className="font-semibold text-secondary">ne adaptăm</span> cu
     ușurință cerințelor în schimbare.
   </p>,
 ];
@@ -131,7 +131,7 @@ const Servicii = () => {
           ))}
         </div>
         <Button
-          text="Cere o ofertă!"
+          text="Cere ofertă rapidă ➔"
           className="mx-auto"
           onClick={() => scrollToSection("programari")}
         />
