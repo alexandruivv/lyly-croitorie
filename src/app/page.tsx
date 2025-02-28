@@ -8,12 +8,14 @@ import Intrebari from "./pages/Intrebari";
 import LucrarileNoastre from "@/app/pages/LucrarileNoastre";
 import Recenzii from "@/app/components/Recenzii";
 import Preturi from "./pages/Preturi";
+import GaInitializer from "@/app/components/GAInitializer";
 
 const sectionClassName = "lg:min-h-[75vh]";
 
 export default function Home() {
   return (
     <>
+      <GaInitializer />
       <section className={sectionClassName}>
         <HomePage />
       </section>

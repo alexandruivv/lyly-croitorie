@@ -17,10 +17,12 @@ import ideaImg from "../../../public/svg/idea.svg";
 import { CustomCSSProperties } from "@/app/types/CustomCSSProperties";
 import ExpansionPanel from "../components/ExpansionPanel";
 import ImageText from "../components/ImageText";
+import ReactGA from "react-ga4";
 
 const Intrebari = () => {
   const faqs = [
     {
+      id: 'CumFunctioneaza_intrebare',
       question: "Cum funcționează serviciul de croitorie mobilă?",
       answer: (
         <div>
@@ -56,6 +58,7 @@ const Intrebari = () => {
       ),
     },
     {
+      id: 'InCeLocalitati_intrebare',
       question: "În ce localități oferiți serviciul?",
       answer: (
         <div>
@@ -70,6 +73,7 @@ const Intrebari = () => {
       ),
     },
     {
+      id: 'ExistaOTaxa_intrebare',
       question: "Există o taxă pentru deplasare?",
       answer: (
         <div>
@@ -82,6 +86,7 @@ const Intrebari = () => {
       ),
     },
     {
+      id: 'CatDureaza_intrebare',
       question: "Cât durează un retuș obișnuit?",
       answer: (
         <div>
@@ -94,6 +99,7 @@ const Intrebari = () => {
       ),
     },
     {
+      id: 'OferitiServiciiUrgente_intrebare',
       question: "Oferiți servicii urgente?",
       answer: (
         <div>
@@ -106,6 +112,7 @@ const Intrebari = () => {
       ),
     },
     {
+      id: 'ComandaConfectDeLaZero_intrebare',
       question: "Se poate comanda și confecționarea unui produs de la zero?",
       answer: (
         <div>
@@ -118,6 +125,7 @@ const Intrebari = () => {
       ),
     },
     {
+      id: 'CumPotFaceProg_intrebare',
       question: "Cum pot face o programare?",
       answer: (
         <div>
@@ -213,6 +221,7 @@ const Intrebari = () => {
       ),
     },
     {
+      id: 'AjustariSuplim_intrebare',
       question: "Dacă sunt necesare ajustări suplimentare, ce soluții oferiți?",
       answer: (
         <div>
@@ -225,6 +234,7 @@ const Intrebari = () => {
       ),
     },
     {
+      id: 'CroitorieEvenSpec_intrebare',
       question:
         "Faceți și croitorie pentru evenimente speciale (nuntă, botez, costume elegante)?",
       answer: (
@@ -262,6 +272,7 @@ const Intrebari = () => {
             {faqs.map((faq, index) => (
               <ExpansionPanel
                 key={index}
+                id={faq.id}
                 question={faq.question}
                 answer={faq.answer}
               />
@@ -286,6 +297,13 @@ const Intrebari = () => {
                 <a
                   className="font-bold text-secondary ml-2 cursor-pointer hover:text-brownHover transition duration-300 mr-2"
                   href="tel:0742153656"
+                  onClick={() => {
+                    ReactGA.event({
+                      category: "cere_oferta",
+                      action: "Telefon_intrebari_click",
+                      label: "Click pe cere oferta telefon",
+                    });
+                  }}
                 >
                   0742 153 656
                 </a>
@@ -293,6 +311,13 @@ const Intrebari = () => {
                 <a
                   className="font-bold text-secondary ml-2 cursor-pointer hover:text-brownHover transition duration-300 mr-2"
                   href="https://wa.me/40742153656"
+                  onClick={() => {
+                    ReactGA.event({
+                      category: "cere_oferta",
+                      action: "Whatsapp_telefon_click",
+                      label: "Click pe cere oferta whatsapp",
+                    });
+                  }}
                 >
                   WhatsApp
                 </a>
@@ -312,7 +337,14 @@ const Intrebari = () => {
         <Button
           text="Cere ofertă rapidă ➔"
           className="mx-auto"
-          onClick={() => scrollToSection("programari")}
+          onClick={() => {
+            scrollToSection("programari");
+            ReactGA.event({
+              category: "cere_oferta",
+              action: "Intrebari_oferta_btn",
+              label: "Click pe cere oferta intrebari",
+            });
+          }}
         />
         <div className="w-full flex items-center">
           <GoArrow

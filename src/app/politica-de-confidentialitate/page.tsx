@@ -1,11 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { Suspense } from "react";
 import Footer from "@/app/components/Footer";
 
 const PrivacyPolicy = () => {
   return (
-    <>
+    <Suspense fallback={<div>Loading...</div>}>
       <div className="p-14 text-black">
         <h1 className="text-2xl font-bold mb-4">Politica de Confidențialitate</h1>
         <p className="mb-4">
@@ -63,7 +63,7 @@ const PrivacyPolicy = () => {
       <section>
         <Footer />
       </section>
-    </>
+    </Suspense>
   );
 };
 

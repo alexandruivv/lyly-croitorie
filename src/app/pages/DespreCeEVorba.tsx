@@ -15,6 +15,7 @@ import { scrollToSection } from "../utils/utils";
 import bgMobileImg from "../../../public/images/despre_ce_e_vorba_bg_mobile.webp";
 import bgImg from "../../../public/images/despre_ce_e_vorba_bg.webp";
 import { CustomCSSProperties } from "@/app/types/CustomCSSProperties";
+import ReactGA from "react-ga4";
 
 const descrieri: Descriere[] = [
   {
@@ -72,7 +73,14 @@ const DespreCeEVorba = () => {
         <Button
           text="Cere ofertă rapidă ➔"
           className="mx-auto"
-          onClick={() => scrollToSection("programari")}
+          onClick={() => {
+            scrollToSection("programari");
+            ReactGA.event({
+              category: "cere_oferta",
+              action: "CumProcedam_oferta_btn",
+              label: "Click pe cere oferta cum procedam",
+            });
+          }}
         />
         <div className="w-full flex items-center">
           <GoArrow

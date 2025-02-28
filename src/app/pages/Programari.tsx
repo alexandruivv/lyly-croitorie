@@ -21,6 +21,7 @@ import { toast } from "react-toastify";
 import { sendEmail, VerifyCaptchaResponse } from "../services/apiClient";
 import { scrollToSection } from "@/app/utils/utils";
 import GoArrow, { GoArrowDirection } from "@/app/components/GoArrow";
+import ReactGA from "react-ga4";
 
 const Programari = () => {
   const [showCaptcha, setShowCaptcha] = useState(false);
@@ -213,6 +214,13 @@ const Programari = () => {
                 elements="0742 153 656"
                 img={phoneImg}
                 href="tel:0742153656"
+                onClick={() => {
+                  ReactGA.event({
+                    category: "cere_oferta",
+                    action: "Telefon_click",
+                    label: "Click pe cere oferta telefon",
+                  });
+                }}
               />
               <ImageText
                 classNameImg="w-8"
@@ -220,6 +228,13 @@ const Programari = () => {
                 elements="contact@lylydesign.ro"
                 img={mailImg}
                 href="mailto:contact@lylycroitorie.ro"
+                onClick={() => {
+                  ReactGA.event({
+                    category: "cere_oferta",
+                    action: "Email_click",
+                    label: "Click pe cere oferta email",
+                  });
+                }}
               />
               <ImageText
                 classNameImg="w-8"
@@ -233,6 +248,13 @@ const Programari = () => {
                 elements="Lyly Design"
                 img={fbImg}
                 href="https://facebook.com/leyladesign"
+                onClick={() => {
+                  ReactGA.event({
+                    category: "cere_oferta",
+                    action: "Facebook_click",
+                    label: "Click pe cere oferta facebook",
+                  });
+                }}
               />
             </div>
           </div>
@@ -246,6 +268,13 @@ const Programari = () => {
                 img={messImg}
                 href="https://m.me/leyladesign?text=Buna, doresc o oferta!"
                 blank
+                onClick={() => {
+                  ReactGA.event({
+                    category: "cere_oferta",
+                    action: "Messenger_click",
+                    label: "Click pe cere oferta messenger",
+                  });
+                }}
               />
               <ImageText
                 className='bg-green-700 rounded-xl border-black border-2'
@@ -255,6 +284,13 @@ const Programari = () => {
                 img={whatsApp}
                 href='https://wa.me/+40742153656'
                 blank
+                onClick={() => {
+                  ReactGA.event({
+                    category: "cere_oferta",
+                    action: "Whatsapp_click",
+                    label: "Click pe cere oferta whatsapp",
+                  });
+                }}
               />
             </div>
             <ImageText
@@ -322,6 +358,13 @@ const Programari = () => {
               className="mt-3 max-md:mt-8 mx-auto"
               disabled={isLoading}
               loading={isLoading}
+              onClick={() => {
+                ReactGA.event({
+                  category: "cere_oferta",
+                  action: "Trimite_formular",
+                  label: "Click pe trimite formular",
+                });
+              }}
             />
           </form>
           <GoArrow

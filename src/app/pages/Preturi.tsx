@@ -11,6 +11,7 @@ import GoArrow from "../components/GoArrow";
 import { scrollToSection } from "../utils/utils";
 import PriceCard, { PriceCardModel } from "../components/PriceCard";
 import ImageText from "../components/ImageText";
+import ReactGA from "react-ga4";
 
 const prices: PriceCardModel[] = [
   {
@@ -187,7 +188,14 @@ const Preturi = () => {
         <Button
           text="Cere ofertă rapidă ➔"
           className="mx-auto"
-          onClick={() => scrollToSection("programari")}
+          onClick={() => {
+            scrollToSection("programari");
+            ReactGA.event({
+              category: "cere_oferta",
+              action: "Preturi_oferta_btn",
+              label: "Click pe cere oferta preturi",
+            });
+          }}
         />
         <div className="w-full flex items-center">
           <GoArrow

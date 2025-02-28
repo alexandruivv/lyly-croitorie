@@ -6,6 +6,8 @@ import "react-toastify/dist/ReactToastify.css";
 import {Metadata} from "next";
 import PixelTrackerProvider from "@/app/PixelTrackerProvider";
 import Banner from "@/app/components/Banner";
+import GaInitializer from "@/app/components/GAInitializer";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: 'Lyly - Croitorie Mobila La Comanda!',
@@ -25,6 +27,7 @@ export default function RootLayout({
                                    }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
     <head>
@@ -52,6 +55,17 @@ export default function RootLayout({
           src="https://www.facebook.com/tr?id=666932342680278&ev=PageView&noscript=1"
         />
       </noscript>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-JP6E0E8DQ5"></script>
+      <script dangerouslySetInnerHTML={{
+        __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)}
+          gtag('js', new Date());
+  
+          gtag('config', 'G-JP6E0E8DQ5');
+        `,
+      }}>
+      </script>
     </head>
     <body className={`${poppins.className} font-medium`}>
     <div>
@@ -61,7 +75,7 @@ export default function RootLayout({
         <Navbar/>
       </div>
 
-      <main className='mt-16 md:h-24'>{children}</main>
+      <main className='mt-16 md:h-24'><Suspense fallback={<div>Loading...</div>}>{children}</Suspense></main>
     </div>
     <ToastContainer/>
     </body>

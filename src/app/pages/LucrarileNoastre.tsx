@@ -39,6 +39,7 @@ import img28 from '../../../public/images/poze-lucrari/28.jpg';
 import img29 from '../../../public/images/poze-lucrari/29.jpeg';
 import img30 from '../../../public/images/poze-lucrari/30.jpeg';
 import ReviewsSection from "@/app/components/ReviewsSection";
+import ReactGA from "react-ga4";
 
 
 const responsive = {
@@ -128,7 +129,14 @@ const LucrarileNoastre = () => {
         <Button
           text="Cere ofertă rapidă ➔"
           className="mx-auto"
-          onClick={() => scrollToSection("programari")}
+          onClick={() => {
+            scrollToSection("programari");
+            ReactGA.event({
+              category: "cere_oferta",
+              action: "CreatiileNoastre_oferta_btn",
+              label: "Click pe cere oferta creatiile noastre",
+            });
+          }}
         />
         <div className='w-full flex items-center'>
           <GoArrow

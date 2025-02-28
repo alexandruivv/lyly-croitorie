@@ -8,6 +8,7 @@ import bgMobileImg from "../../../public/images/despre_ce_e_vorba_bg_mobile.webp
 import bgImg from "../../../public/images/despre_ce_e_vorba_bg.webp";
 import { CustomCSSProperties } from "@/app/types/CustomCSSProperties";
 import React from "react";
+import ReactGA from "react-ga4";
 
 const Servicii = () => {
   return (
@@ -43,7 +44,13 @@ const Servicii = () => {
         <Button
           text="Cere ofertă rapidă ➔"
           className="mx-auto"
-          onClick={() => scrollToSection("programari")}
+          onClick={() => {
+            scrollToSection("programari");
+            ReactGA.event({
+              category: "cere_oferta",
+              action: "Servicii_oferta_btn",
+              label: "Click pe cere oferta servicii",
+            });}}
         />
         <div className='w-full flex items-center'>
           <GoArrow

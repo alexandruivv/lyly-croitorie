@@ -9,6 +9,7 @@ import {CustomCSSProperties} from "@/app/types/CustomCSSProperties";
 import React from "react";
 import "react-multi-carousel/lib/styles.css";
 import ReviewsSection from "@/app/components/ReviewsSection";
+import ReactGA from "react-ga4";
 
 
 const Recenzii = () => {
@@ -36,7 +37,14 @@ const Recenzii = () => {
         <Button
           text="Cere ofertă rapidă ➔"
           className="mx-auto"
-          onClick={() => scrollToSection("programari")}
+          onClick={() => {
+            scrollToSection("programari");
+            ReactGA.event({
+              category: "cere_oferta",
+              action: "Recenzii_oferta_btn",
+              label: "Click pe cere oferta recenzii",
+            });
+          }}
         />
         <div className='w-full flex items-center'>
           <GoArrow

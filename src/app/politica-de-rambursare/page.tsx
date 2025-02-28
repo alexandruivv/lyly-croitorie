@@ -1,9 +1,9 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Footer from "@/app/components/Footer";
 
 const RefundPolicy = () => {
   return (
-    <>
+    <Suspense fallback={<div>Loading...</div>}>
       <div className='p-14 text-black'>
 
         <h1 className="text-2xl font-bold mb-4">Politica de Rambursare</h1>
@@ -56,7 +56,7 @@ const RefundPolicy = () => {
       <section>
         <Footer />
       </section>
-    </>
+    </Suspense>
   );
 };
 

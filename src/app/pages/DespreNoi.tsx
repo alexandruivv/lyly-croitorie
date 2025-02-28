@@ -14,6 +14,7 @@ import React, { ReactNode } from "react";
 import Image from "next/image";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import ReactGA from "react-ga4";
 
 const servicii: ReactNode[] = [
   <p>
@@ -133,7 +134,14 @@ const Servicii = () => {
         <Button
           text="Cere ofertă rapidă ➔"
           className="mx-auto"
-          onClick={() => scrollToSection("programari")}
+          onClick={() => {
+            scrollToSection("programari");
+            ReactGA.event({
+              category: "cere_oferta",
+              action: "DespreNoi_oferta_btn",
+              label: "Click pe cere oferta despre noi",
+            });
+          }}
         />
         <div className="w-full flex items-center">
           <GoArrow

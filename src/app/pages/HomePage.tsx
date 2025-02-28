@@ -7,6 +7,7 @@ import bgMobileImg from "../../../public/images/Untitled-design-4-2.jpg";
 import bgImg from "../../../public/images/pexels-pavel-danilyuk-6461064-2.webp";
 import { CustomCSSProperties } from "@/app/types/CustomCSSProperties";
 import React from "react";
+import ReactGA from "react-ga4";
 
 const HomePage = () => {
   return (
@@ -32,7 +33,14 @@ const HomePage = () => {
         <Button
           text="Cere ofertă rapidă ➔"
           className="mt-6"
-          onClick={() => scrollToSection("programari")}
+          onClick={() => {
+            scrollToSection("programari");
+            ReactGA.event({
+              category: "cere_oferta",
+              action: "Homepage_oferta_btn",
+              label: "Click pe cere oferta homepage",
+            });
+          }}
         />
         <h3 className="text-sm sm:text-base md:text-xl mt-4">
           Sau sună acum: <a

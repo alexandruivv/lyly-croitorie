@@ -1,13 +1,15 @@
 "use client";
 
 import React, { useState } from "react";
+import ReactGA from "react-ga4";
 
 interface Props {
+  id: string;
   question: string;
   answer: React.ReactNode;
 }
 
-const ExpansionPanel = ({ question, answer }: Props) => {
+const ExpansionPanel = ({ question, answer, id }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const togglePanel = () => {
@@ -15,7 +17,13 @@ const ExpansionPanel = ({ question, answer }: Props) => {
   };
 
   return (
-    <div className="border rounded-lg shadow-md mb-4">
+    <div className="border rounded-lg shadow-md mb-4" onClick={() => {
+      ReactGA.event({
+        category: "intrebari",
+        action: id,
+        label: "Click pe cere oferta " + id,
+      });
+    }}>
       <div
         className={`bg-peach p-4 cursor-pointer flex justify-between items-center transition-transform duration-300 ease-in-out ${
           isOpen
