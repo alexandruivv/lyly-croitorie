@@ -46,6 +46,13 @@ const HomePage = () => {
           Sau sună acum: <a
           className="font-bold text-secondary ml-2 cursor-pointer hover:text-brownHover transition duration-300"
           href="tel:0742153656"
+          onClick={() => {
+            ReactGA.event({
+              category: "cere_oferta",
+              action: "Telefon_homepage_click",
+              label: "Click pe cere oferta telefon homepage",
+            });
+          }}
         >
           📞 0742 153 656
         </a>
